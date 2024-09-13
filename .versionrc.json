@@ -1,0 +1,42 @@
+{
+  "commit-all": true,
+  "types": [
+    {
+      "type": "feat",
+      "section": "기능 추가"
+    },
+    {
+      "type": "fix",
+      "section": "버그 수정"
+    },
+    {
+      "type": "chore",
+      "section": "기타 내역"
+    },
+    {
+      "type": "docs",
+      "hidden": true
+    },
+    {
+      "type": "style",
+      "section": "CSS 작업 내역",
+      "hidden": true
+    },
+    {
+      "type": "refactor",
+      "section": "코드 리팩토링"
+    },
+    {
+      "type": "perf",
+      "section": "Performance",
+      "hidden": true
+    },
+    {
+      "type": "test",
+      "hidden": true
+    },
+    { "type": "revert", "section": "Reverts", "hidden": true },
+    { "type": "build", "section": "Build System", "hidden": true },
+    { "type": "ci", "section": "CI", "hidden": true }
+  ]
+}

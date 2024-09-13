@@ -1,0 +1,17 @@
+{
+  "name": "noginogi",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DaHoon06/noginogi.git"
+  },
+  "author": "dahoon06",
+  "license": "ISC",
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
+}
