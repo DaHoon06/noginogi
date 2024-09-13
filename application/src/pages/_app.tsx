@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { HydrationBoundary, QueryClientProvider } from "@tanstack/react-query";
 import {queryClient} from "@lib/tanstack";
 import { useState } from "react";
-import {ToastHandler} from "@components/common/toast/toastHandler";
+import {ToastHandler} from "@components/common/Toast/toastHandler";
 import {GlobalStyle, theme} from "@styles/styled-components";
 import '@styles/global/index.scss';
 

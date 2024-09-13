@@ -3,9 +3,6 @@ import { combine, devtools } from "zustand/middleware";
 
 export enum ModalType {
   EMPTY = "",
-  SIGN_ALERT = "signInAlertModal",
-  REGISTER_SHOP = "registerShop",
-  REGISTER_MAP = "registerMap",
 }
 
 export enum OpenType {
