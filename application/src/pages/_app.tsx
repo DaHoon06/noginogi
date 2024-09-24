@@ -6,6 +6,7 @@ import { useState } from "react";
 import {ToastHandler} from "@components/common/Toast/toastHandler";
 import {GlobalStyle, theme} from "@styles/styled-components";
 import '@styles/global/index.scss';
+import {BaseLayout} from "../layouts/BaseLayout";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [queryState] = useState(() => queryClient);
@@ -16,7 +17,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <QueryClientProvider client={queryState}>
         <HydrationBoundary state={pageProps.dehydratedState}>
           <ThemeProvider theme={theme}>
+            <BaseLayout>
               <Component {...pageProps} />
+            </BaseLayout>
             <div id="modal" />
             <ToastHandler />
           </ThemeProvider>
