@@ -66,7 +66,7 @@ export const GlobalStyle = createGlobalStyle`
       display: flex;
       flex: 1;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: space-between
     }
 
     html, body {
