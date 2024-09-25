@@ -52,3 +52,5 @@ const FlexBox = forwardRef(
 );
 
 export default FlexBox;
+
+FlexBox.displayName = 'FlexBox';
