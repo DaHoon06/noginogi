@@ -17,3 +17,23 @@ export enum ErinDayOfTheWeek {
   SATURDAY = '삼하인(Samhain)',
   SUNDAY = '임볼릭(imbolic)',
 }
+
+export const daysOfWeek: DayOfTheWeek[] = [
+  DayOfTheWeek.SUNDAY,
+  DayOfTheWeek.MONDAY,
+  DayOfTheWeek.TUESDAY,
+  DayOfTheWeek.WEDNESDAY,
+  DayOfTheWeek.THURSDAY,
+  DayOfTheWeek.FRIDAY,
+  DayOfTheWeek.SATURDAY
+];
+
+export const dayToErinDay: { [key in DayOfTheWeek]: ErinDayOfTheWeek } = {
+  [DayOfTheWeek.SUNDAY]: ErinDayOfTheWeek.SUNDAY,
+  [DayOfTheWeek.MONDAY]: ErinDayOfTheWeek.MONDAY,
+  [DayOfTheWeek.TUESDAY]: ErinDayOfTheWeek.TUESDAY,
+  [DayOfTheWeek.WEDNESDAY]: ErinDayOfTheWeek.WEDNESDAY,
+  [DayOfTheWeek.THURSDAY]: ErinDayOfTheWeek.THURSDAY,
+  [DayOfTheWeek.FRIDAY]: ErinDayOfTheWeek.FRIDAY,
+  [DayOfTheWeek.SATURDAY]: ErinDayOfTheWeek.SATURDAY,
+};

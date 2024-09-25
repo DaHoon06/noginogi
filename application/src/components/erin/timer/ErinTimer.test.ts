@@ -1,8 +1,11 @@
 import { erinDay } from "@components/erin/timer/ErinTimer";
 import { ErinDayOfTheWeek } from "@enums/erin";
 
+
 /**
+ * ======================================
  * 에린에서의 하루는 현실 시간 36분으로 간주
+ * ======================================
  */
 
 describe('요일별 요일 구하기', () => {
@@ -46,4 +49,5 @@ describe('요일별 요일 구하기', () => {
     const expectedDay = ErinDayOfTheWeek.SUNDAY;
     expect(erinDay()).toBe(expectedDay);
   });
-})
+});
+

@@ -1,26 +1,6 @@
 import { ReactElement, useEffect, useState } from "react";
-import { DayOfTheWeek, ErinDayOfTheWeek } from "@enums/erin";
-
-
-const daysOfWeek: DayOfTheWeek[] = [
-  DayOfTheWeek.SUNDAY,
-  DayOfTheWeek.MONDAY,
-  DayOfTheWeek.TUESDAY,
-  DayOfTheWeek.WEDNESDAY,
-  DayOfTheWeek.THURSDAY,
-  DayOfTheWeek.FRIDAY,
-  DayOfTheWeek.SATURDAY
-];
-
-const dayToErinDay: { [key in DayOfTheWeek]: ErinDayOfTheWeek } = {
-  [DayOfTheWeek.SUNDAY]: ErinDayOfTheWeek.SUNDAY,
-  [DayOfTheWeek.MONDAY]: ErinDayOfTheWeek.MONDAY,
-  [DayOfTheWeek.TUESDAY]: ErinDayOfTheWeek.TUESDAY,
-  [DayOfTheWeek.WEDNESDAY]: ErinDayOfTheWeek.WEDNESDAY,
-  [DayOfTheWeek.THURSDAY]: ErinDayOfTheWeek.THURSDAY,
-  [DayOfTheWeek.FRIDAY]: ErinDayOfTheWeek.FRIDAY,
-  [DayOfTheWeek.SATURDAY]: ErinDayOfTheWeek.SATURDAY,
-};
+import { daysOfWeek, dayToErinDay, ErinDayOfTheWeek } from "@enums/erin";
+import * as S from './ErinTimer.styled';
 
 export const erinDay = (): ErinDayOfTheWeek => {
   const currentDay = new Date().getDay();
@@ -60,8 +40,9 @@ export const ErinTimer = (): ReactElement => {
   }, []);
 
   return (
-    <div>
-      <div>현재 에린은 {time} {erinDay()} 입니다.</div>
-    </div>
+    <S.TimerContainer>
+      <S.DayDisplay>현재 에린은 <S.TimeDisplay>{time}</S.TimeDisplay> {erinDay()} 입니다.</S.DayDisplay>
+      <S.DotContainer />
+    </S.TimerContainer>
   );
 };
