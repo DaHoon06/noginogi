@@ -4,7 +4,7 @@ const FooterLayout = styled.footer`
   width: 100%;
   height: 136px;
   border-top: 1px solid black;
-  background-color: #222;
+  background-color: ${({theme}) => theme.colors.background.footer};
 `;
 
 const FooterContainer = styled.div`

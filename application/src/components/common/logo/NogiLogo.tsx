@@ -15,7 +15,7 @@ export const NogiLogo = (): ReactElement => {
     <NogiLogoLayout>
       <Image
         src={"/images/noginogi.svg"}
-        width={90}
+        width={120}
         height={100}
         alt={"노기노기"}
       />

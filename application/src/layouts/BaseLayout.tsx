@@ -12,6 +12,7 @@ const Main = styled.main`
   height: 100%;
   min-height: calc(100vh - 236px);
   padding: 0 1em;
+  background-color: ${({ theme }) => theme.colors.background.base};
 `;
 
 const MainContainer = styled.div`
@@ -22,6 +23,7 @@ const MainContainer = styled.div`
 `;
 
 export const BaseLayout = ({ children }: BaseLayoutProps) => {
+
   return (
     <>
       <div>
