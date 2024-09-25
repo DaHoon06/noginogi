@@ -71,34 +71,34 @@ export const GlobalStyle = createGlobalStyle`
 
     html, body {
       width: 100%;
-        overflow-y: auto;
-        overflow-x: hidden;
-        box-sizing: border-box;
+      overflow-y: auto;
+      overflow-x: hidden;
+      box-sizing: border-box;
 
+      &::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 8px;
+        border: 1px solid #f1f1f1;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      @media screen and (max-width: 769px) {
         &::-webkit-scrollbar {
-          width: 12px;
+          width: 0;
         }
-
-        &::-webkit-scrollbar-track {
-          background: #f1f1f1;
-          border-radius: 4px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-          background-color: #888;
-          border-radius: 8px;
-          border: 1px solid #f1f1f1;
-        }
-
-        &::-webkit-scrollbar-thumb:hover {
-          background: #555;
-        }
-
-        @media screen and (max-width: 769px) {
-          &::-webkit-scrollbar {
-            width: 0;
-          }
-        }
+      }
     }
 
     body {

@@ -1,4 +1,5 @@
 import { GlobalStyle } from "./global-style";
-import { theme } from "./theme";
+import { media, scroll } from "./theme";
+import { colors, light, dark } from "@styles/styled-components/pallet";
 
-export { GlobalStyle, theme };
+export { GlobalStyle, media, scroll, colors, light, dark };
