@@ -10,33 +10,33 @@ import { BaseLayout } from "@layouts/BaseLayout";
 import MetaHead from "@components/heads/MetaHead";
 import { light, dark, media, scroll, colors } from "@styles/styled-components";
 import Cookies from "js-cookie";
+import useTheme, { THEME_KEY } from "@hooks/useTheme";
 
-enum ThemeMode {
+export enum ThemeMode {
   LIGHT = 'light',
   DARK = 'dark'
 }
 
 export default function App({ Component, pageProps }: AppProps) {
   const [queryState] = useState(() => queryClient);
-  const [themeMode, setThemeMode] = useState<ThemeMode>(ThemeMode.LIGHT);
+  const { theme: mode, setTheme, toggleTheme } = useTheme();
 
   const detectSystemTheme = useCallback(() => {
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? ThemeMode.DARK : ThemeMode.LIGHT;
   }, []);
 
   useEffect(() => {
-    const savedTheme = Cookies.get('theme');
+    const savedTheme = Cookies.get(THEME_KEY);
     if (savedTheme) {
-      setThemeMode(savedTheme);
+      setTheme(savedTheme);
     } else {
       const systemTheme = detectSystemTheme();
-      setThemeMode(systemTheme);
+      setTheme(systemTheme);
     }
   }, []);
 
   const theme = useMemo<DefaultTheme>(() => {
-    const themeColors = themeMode === 'light' ? light.colors : dark.colors;
-
+    const themeColors = mode === ThemeMode.LIGHT ? light.colors : dark.colors;
     return {
       colors: {
         ...colors,
@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }: AppProps) {
       media,
       scroll
     };
-  }, [themeMode]);
+  }, [mode]);
 
   return (
     <>
@@ -53,6 +53,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <QueryClientProvider client={queryState}>
         <HydrationBoundary state={pageProps.dehydratedState}>
           <ThemeProvider theme={theme}>
+            <button type={'button'} onClick={toggleTheme}>
+              TEST
+            </button>
             <MetaHead />
             <BaseLayout>
               <Component {...pageProps} />

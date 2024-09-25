@@ -15,6 +15,7 @@ const customJestConfig = {
     "^@components/(.*)$": "<rootDir>/src/components/$1",
     "^@pages/(.*)$": "<rootDir>/src/pages/$1",
     "^@styles/(.*)$": "<rootDir>/src/styles/$1",
+    "^@hooks/(.*)$": "<rootDir>/src/hooks/$1",
     "^@enums/(.*)$": "<rootDir>/src/enums/$1",
     "^@interfaces/(.*)$": "<rootDir>/src/interfaces/$1",
     "^@images/(.*)$": "<rootDir>/public/images/$1",
