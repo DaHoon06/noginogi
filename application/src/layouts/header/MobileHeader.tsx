@@ -34,10 +34,12 @@ export const MobileHeader = ({isShow}: MobileHeaderProps): ReactElement => {
   return (
     <AnimatePresence>
       {isShow && (
-        <HeaderLayout initial={{ opacity: 0, y: -50 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -50 }}
-                      transition={{ duration: 0.25 }}>
+        <HeaderLayout
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.25 }}
+        >
           <HeaderContainer>
             <Link href={'/'}>
               <NogiLogo isMobile={true} />

@@ -12,12 +12,13 @@ const BaseContainer = styled.div`
   height: 100%;
 `;
 
-const Main = styled.main`
+const Main = styled.main<{$isScrolled: boolean}>`
   width: 100%;
   height: 100%;
   min-height: calc(100vh - 236px);
   padding: 0 1em;
   background-color: ${({ theme }) => theme.colors.background.base};
+  margin-top: ${({$isScrolled}) => $isScrolled ? 60 : 100}px;
 `;
 
 const MainContainer = styled.div`
@@ -31,7 +32,7 @@ export const BaseLayout = ({ children }: BaseLayoutProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = ({target}: any) => {
-    if (target.scrollTop > 300) {
+    if (target.scrollTop > 200) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -48,7 +49,7 @@ export const BaseLayout = ({ children }: BaseLayoutProps) => {
     <>
       <BaseContainer>
         {isScrolled ? <MobileHeader isShow={isScrolled} /> : <StaticHeader isShow={isScrolled} />}
-        <Main>
+        <Main $isScrolled={isScrolled}>
           <MainContainer>{children}</MainContainer>
         </Main>
       </BaseContainer>

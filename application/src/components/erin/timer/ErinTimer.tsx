@@ -41,8 +41,9 @@ export const ErinTimer = (): ReactElement => {
 
   return (
     <S.TimerContainer>
-      <S.DayDisplay>현재 에린은 <S.TimeDisplay>{time}</S.TimeDisplay> {erinDay()} 입니다.</S.DayDisplay>
-      <S.DotContainer />
+      <S.DayDisplay>
+        <S.TimeDisplay>{time}</S.TimeDisplay> {erinDay()}
+      </S.DayDisplay>
     </S.TimerContainer>
   );
 };
