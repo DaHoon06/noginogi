@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {ReactElement} from "react";
 import {Typography} from "@components/common/Typography";
+import Image from 'next/image';
 
 export const ItemCardLayout = styled.article`
   height: 300px;
