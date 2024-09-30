@@ -10,7 +10,7 @@ import { BaseLayout } from "@layouts/BaseLayout";
 import MetaHead from "@components/heads/MetaHead";
 import { light, dark, media, scroll, colors } from "@styles/styled-components";
 import Cookies from "js-cookie";
-import useTheme, { THEME_KEY } from "@hooks/useTheme";
+import {THEME_KEY, ThemeModeProvider, useTheme} from "../providers/themeModeProvider";
 
 export enum ThemeMode {
   LIGHT = 'light',
@@ -19,14 +19,31 @@ export enum ThemeMode {
 
 export default function App({ Component, pageProps }: AppProps) {
   const [queryState] = useState(() => queryClient);
-  const { theme: mode, setTheme, toggleTheme } = useTheme();
+
+  return (
+    <>
+      <GlobalStyle />
+      <QueryClientProvider client={queryState}>
+        <HydrationBoundary state={pageProps.dehydratedState}>
+          <ThemeModeProvider>
+            <ThemeConsumerWrapper Component={Component} pageProps={pageProps} />
+          </ThemeModeProvider>
+        </HydrationBoundary>
+      </QueryClientProvider>
+    </>
+  );
+}
+
+const ThemeConsumerWrapper = ({ Component, pageProps }: { Component: any, pageProps: any }) => {
+  const { theme: mode, setTheme } = useTheme();
 
   const detectSystemTheme = useCallback(() => {
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? ThemeMode.DARK : ThemeMode.LIGHT;
   }, []);
 
   useEffect(() => {
-    const savedTheme = Cookies.get(THEME_KEY);
+    const savedTheme: any  = Cookies.get(THEME_KEY) as ThemeMode;
+
     if (savedTheme) {
       setTheme(savedTheme);
     } else {
@@ -48,23 +65,13 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [mode]);
 
   return (
-    <>
-      <GlobalStyle />
-      <QueryClientProvider client={queryState}>
-        <HydrationBoundary state={pageProps.dehydratedState}>
-          <ThemeProvider theme={theme}>
-            <button type={'button'} onClick={toggleTheme}>
-              TEST
-            </button>
-            <MetaHead />
-            <BaseLayout>
-              <Component {...pageProps} />
-            </BaseLayout>
-            <div id="modal" />
-            <ToastHandler />
-          </ThemeProvider>
-        </HydrationBoundary>
-      </QueryClientProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <MetaHead />
+      <BaseLayout>
+        <Component {...pageProps} />
+        <div id="modal" />
+        <ToastHandler />
+      </BaseLayout>
+    </ThemeProvider>
   );
-}
+};

@@ -1,11 +1,16 @@
-import { Header } from "./Header";
+import { StaticHeader, MobileHeader } from "./header";
 import { Footer } from "./Footer";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import styled from "styled-components";
 
 interface BaseLayoutProps {
   children: ReactNode;
 }
+
+const BaseContainer = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
 const Main = styled.main`
   width: 100%;
@@ -23,15 +28,30 @@ const MainContainer = styled.div`
 `;
 
 export const BaseLayout = ({ children }: BaseLayoutProps) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = ({target}: any) => {
+    if (target.scrollTop > 300) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    handleScroll({target: document.body});
+    document.body.addEventListener('scroll', handleScroll);
+    return () => document.body.removeEventListener('scroll', handleScroll)
+  }, []);
 
   return (
     <>
-      <div>
-        <Header />
+      <BaseContainer>
+        {isScrolled ? <MobileHeader isShow={isScrolled} /> : <StaticHeader isShow={isScrolled} />}
         <Main>
           <MainContainer>{children}</MainContainer>
         </Main>
-      </div>
+      </BaseContainer>
       <Footer />
     </>
   );
