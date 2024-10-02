@@ -8,6 +8,8 @@
 
 .swc/
 
+.env
+
 # testing
 /coverage
 
