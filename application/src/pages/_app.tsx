@@ -10,7 +10,7 @@ import { BaseLayout } from "@layouts/BaseLayout";
 import MetaHead from "@components/heads/MetaHead";
 import { light, dark, media, scroll, colors } from "@styles/styled-components";
 import Cookies from "js-cookie";
-import {THEME_KEY, ThemeModeProvider, useTheme} from "../providers/themeModeProvider";
+import { THEME_KEY, ThemeModeProvider, useTheme } from "@providers/themeModeProvider";
 
 export enum ThemeMode {
   LIGHT = 'light',

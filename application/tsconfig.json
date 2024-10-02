@@ -34,6 +34,7 @@
       "@config/*": ["./config/*"],
       "@apis/*": ["./apis/*"],
       "@styles/*": ["./styles/*"],
+      "@providers/*": ["./providers/*"],
       "@images/*": ["../public/images/*"]
     }
   },
