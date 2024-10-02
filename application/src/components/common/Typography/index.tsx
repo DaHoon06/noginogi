@@ -27,9 +27,9 @@ const StyledComponent = (element: any) => styled(element)<TypographyProps>`
   font-family: ${(props) =>
   props.$fontType === "nanumSquare"
     ? "NanumSquare"
-    : props.$fontType === "montserrat"
-      ? "Montserrat"
-      : "Nanum Gothic"},
+    : props.$fontType === "nanumGothic"
+      ? "Nanum Gothic"
+      : "omyu_pretty"},
     sans-serif;
   line-height: ${(props) => props.$lineHeight || 20}px;
   transition: color 0.2s ease-in;

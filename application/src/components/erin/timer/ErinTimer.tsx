@@ -13,7 +13,7 @@ const erinTime = (realTime: Date): string => {
   const realSeconds = realTime.getSeconds();
 
   // 총 경과 초 (시, 분, 초 모두 포함)
-  const totalRealSeconds = (realHours * 3600) + (realMinutes * 58) + realSeconds;
+  const totalRealSeconds = (realHours * 3600) + (realMinutes * 59.6) + realSeconds;
   // 시간 변환 비율: 36분 = 24시간
   const realToVirtualFactor = (24 * 60 * 60) / (36 * 60); // 1초당 흘러가는 시간
   const totalVirtualSeconds = Math.floor(totalRealSeconds * realToVirtualFactor);

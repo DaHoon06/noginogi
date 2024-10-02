@@ -5,19 +5,6 @@ export const TableLayout = () => {
   return (
     <>
       <Table>
-        <Thead>
-          <tr>
-            <th></th>
-            <th colSpan={4}>
-              <div>
-                <span>카테고리</span>
-                <input type="text" />
-                <button>검색</button>
-              </div>
-
-            </th>
-          </tr>
-        </Thead>
         <Tbody>
           <tr>
             <td>상품 이미지1</td>
