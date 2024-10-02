@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import Cookies from 'js-cookie';
 
 export enum ThemeMode {
@@ -18,26 +18,31 @@ export const ThemeContext = createContext<ThemeContextType | undefined>(undefine
 export const THEME_KEY = 'noginogi-theme';
 
 export const ThemeModeProvider = ({ children }: { children: React.ReactNode }) => {
-  const defaultTheme = Cookies.get(THEME_KEY) as ThemeMode || ThemeMode.LIGHT;
-  const [theme, setTheme] = useState<ThemeMode>(defaultTheme);
+  const [theme, setTheme] = useState<ThemeMode>(ThemeMode.LIGHT);
+  const [isMounted, setIsMounted] = useState(false);
   const isDarkMode = useMemo(() => theme === ThemeMode.DARK, [theme]);
 
   useEffect(() => {
-    const storedTheme = Cookies.get(THEME_KEY);
+    setIsMounted(true); // 클라이언트에서만 실행
+    const storedTheme = Cookies.get(THEME_KEY) as ThemeMode;
     if (storedTheme && [ThemeMode.LIGHT, ThemeMode.DARK].includes(storedTheme)) {
-      setTheme(storedTheme as ThemeMode);
+      setTheme(storedTheme);
     }
   }, []);
 
   useEffect(() => {
-    Cookies.set(THEME_KEY, theme);
-  }, [theme]);
+    if (isMounted) {
+      Cookies.set(THEME_KEY, theme);
+    }
+  }, [theme, isMounted]);
 
   const toggleTheme = useCallback(() => {
-    if (theme !== null) {
-      setTheme((prev) => (prev === ThemeMode.LIGHT ? ThemeMode.DARK : ThemeMode.LIGHT));
-    }
-  }, [theme]);
+    setTheme((prev) => (prev === ThemeMode.LIGHT ? ThemeMode.DARK : ThemeMode.LIGHT));
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <ThemeContext.Provider value={{ theme, isDarkMode, setTheme, toggleTheme }}>

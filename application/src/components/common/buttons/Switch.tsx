@@ -15,6 +15,7 @@ export const Switch = (props: SwitchProps): ReactElement => {
     checked = false,
     disabled = false,
   } = props;
+
   return (
     <ReactSwitch
       width={width}
