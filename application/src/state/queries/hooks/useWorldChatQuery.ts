@@ -3,10 +3,10 @@ import {QueryKeys} from "@state/queries/key";
 import {AxiosError} from "axios";
 import {worldChatApi} from "@apis/world.chat.api";
 
-export const useWorldChatQuery = (server = '류트'): any => {
+export const useWorldChatQuery = (channel: string ): any => {
   return useQuery({
-    queryKey: [QueryKeys.wordChatKeys.hornBugleLists, server],
-    queryFn: () => worldChatApi(server),
+    queryKey: [QueryKeys.wordChatKeys.hornBugleLists, channel],
+    queryFn: () => worldChatApi(channel),
     placeholderData: (previousData) => previousData,
     gcTime: 1000 * 60 * 5,
     staleTime: 60 * 1000,

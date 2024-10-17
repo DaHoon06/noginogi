@@ -5,5 +5,5 @@
 interface HornBugleWorldLists {
   character_name: string;
   message: string;
-  data_send: string
+  date_send: string
 }
