@@ -30,9 +30,12 @@
       "@enums/*": ["./enums/*"],
       "@layouts/*": ["./layouts/*"],
       "@services/*": ["./services/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@config/*": ["./config/*"],
       "@apis/*": ["./apis/*"],
       "@hooks/*": ["./hooks/*"],
       "@styles/*": ["./styles/*"],
+      "@providers/*": ["./providers/*"],
       "@images/*": ["../public/images/*"]
     }
   },

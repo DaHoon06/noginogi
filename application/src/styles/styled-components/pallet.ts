@@ -16,7 +16,7 @@ export const dark ={
   colors:{
     background: {
       header: '#22272e',
-      footer: '22272e',
+      footer: '#22272e',
       base: '#22272e',
     },
   }
