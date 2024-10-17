@@ -24,15 +24,15 @@ export default function App({ Component, pageProps }: AppProps) {
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? ThemeMode.DARK : ThemeMode.LIGHT;
   }, []);
 
-  useEffect(() => {
-    const savedTheme = Cookies.get('theme');
-    if (savedTheme) {
-      setThemeMode(savedTheme);
-    } else {
-      const systemTheme = detectSystemTheme();
-      setThemeMode(systemTheme);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const savedTheme = Cookies.get('theme');
+  //   if (savedTheme) {
+  //     setThemeMode(savedTheme);
+  //   } else {
+  //     const systemTheme = detectSystemTheme();
+  //     setThemeMode(systemTheme);
+  //   }
+  // }, []);
 
   const theme = useMemo<DefaultTheme>(() => {
     const themeColors = themeMode === 'light' ? light.colors : dark.colors;
