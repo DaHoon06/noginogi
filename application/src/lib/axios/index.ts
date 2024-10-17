@@ -1,4 +1,8 @@
 import axios, { AxiosInstance, InternalAxiosRequestConfig } from "axios";
+import * as process from "process";
+
+const IS_PROD = process.env.NODE_ENV === 'production';
+const HOST = IS_PROD ? process.env.NEXT_PUBLIC_HOST : 'http://localhost:3000';
 
 const headers = {
   "Content-Type": "application/json",
@@ -33,5 +37,5 @@ const createAxiosInstance = (
 const SERVER_PREFIX = `/api`;
 
 // 기본 api 인스턴스
-export const axiosInstance = createAxiosInstance(SERVER_PREFIX, 'http://localhost:3000');
+export const axiosInstance = createAxiosInstance(SERVER_PREFIX, HOST);
 
