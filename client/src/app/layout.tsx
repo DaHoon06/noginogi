@@ -4,6 +4,7 @@ import React from "react";
 import "@styles/index.scss";
 import { GlobalStyle } from "@chakra-ui/react";
 import { BaseLayout } from "@layouts/BaseLayout";
+import ReactQueryProvider from "@lib/tanstack/providers/reactQueryProvider";
 
 export const metadata: Metadata = {
   title: "노기노기",
@@ -19,10 +20,12 @@ export default function RootLayout({
     <html lang="kr" suppressHydrationWarning>
       <head />
       <body suppressHydrationWarning>
-        <Provider>
-          <GlobalStyle />
-          <BaseLayout>{children}</BaseLayout>
-        </Provider>
+        <ReactQueryProvider>
+          <Provider>
+            <GlobalStyle />
+            <BaseLayout>{children}</BaseLayout>
+          </Provider>
+        </ReactQueryProvider>
       </body>
     </html>
   );

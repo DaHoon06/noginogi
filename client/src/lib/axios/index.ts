@@ -1,8 +1,10 @@
+import { IS_PROD } from "@config/processEnv";
 import axios, { AxiosInstance, InternalAxiosRequestConfig } from "axios";
 import * as process from "process";
 
-const IS_PROD = process.env.NODE_ENV === 'production';
-const HOST = IS_PROD ? process.env.NEXT_PUBLIC_HOST : 'http://localhost:3000';
+const HOST = IS_PROD
+  ? (process.env.NEXT_PUBLIC_HOST as string)
+  : ("http://localhost:3000" as string);
 
 const headers = {
   "Content-Type": "application/json",
@@ -10,7 +12,7 @@ const headers = {
 
 const createAxiosInstance = (
   basePath: string,
-  targetServer: string,
+  targetServer: string
 ): AxiosInstance => {
   const instance: AxiosInstance = axios.create({
     baseURL: `${targetServer}${basePath}`,
@@ -27,7 +29,7 @@ const createAxiosInstance = (
     (response) => response,
     (error) => {
       return Promise.reject(error);
-    },
+    }
   );
 
   return instance;
@@ -38,4 +40,3 @@ const SERVER_PREFIX = `/api`;
 
 // 기본 api 인스턴스
 export const axiosInstance = createAxiosInstance(SERVER_PREFIX, HOST);
-
