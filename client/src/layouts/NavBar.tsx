@@ -18,6 +18,7 @@ import {
   useDisclosure,
   Button,
 } from "@chakra-ui/react";
+import { NogiLogo } from "@components/logo/Logo";
 import { ReactElement } from "react";
 
 export const NavBar = ({ isMobile }: { isMobile: boolean }): ReactElement => {
@@ -25,7 +26,9 @@ export const NavBar = ({ isMobile }: { isMobile: boolean }): ReactElement => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Flex as="nav" p="10px" alignItems="center">
-      <Heading as="h1">Chakra UI 연습</Heading>
+      <Heading as="h1">
+        <NogiLogo />
+      </Heading>
       <Spacer />
       <HStack spacing="20px">
         {/* 버튼 변경 */}
