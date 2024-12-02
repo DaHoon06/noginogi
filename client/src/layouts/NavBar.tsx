@@ -18,6 +18,7 @@ import {
   useDisclosure,
   Button,
 } from "@chakra-ui/react";
+import { ErinTimer } from "@components/erin/timer/ErinTimer";
 import { NogiLogo } from "@components/logo/Logo";
 import { ReactElement } from "react";
 
@@ -60,10 +61,13 @@ export const NavBar = ({ isMobile }: { isMobile: boolean }): ReactElement => {
           </>
         ) : (
           <>
-            <Box bg="gray.200" p="10px">
-              M
-            </Box>
-            <Button colorScheme="purple">Logout</Button>
+            <Text>
+              경매장
+            </Text>
+            <Text>
+              거대한 뿔피리
+            </Text>
+            <ErinTimer />
           </>
         )}
       </HStack>

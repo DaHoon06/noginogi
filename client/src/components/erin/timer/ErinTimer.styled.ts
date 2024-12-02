@@ -1,4 +1,5 @@
-import styled, {keyframes} from "styled-components";
+import { keyframes } from "@emotion/react";
+import styled from "@emotion/styled";
 
 export const blinkAnimation = keyframes`
   0%, 100% {
@@ -17,7 +18,6 @@ export const TimerContainer = styled.div`
 `;
 
 export const TimeDisplay = styled.div`
-
   font-size: 16px;
   font-weight: bold;
   animation: ${blinkAnimation} 1s infinite;
@@ -51,9 +51,9 @@ export const dotAnimation = keyframes`
 
 export const DotContainer = styled.div`
   font-size: 16px;
-  
+
   &:after {
-    content: '';
-    animation: ${dotAnimation} 3s steps(3) infinite; 
+    content: "";
+    animation: ${dotAnimation} 3s steps(3) infinite;
   }
 `;
