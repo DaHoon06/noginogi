@@ -2,7 +2,7 @@
 
 import { ReactElement, useEffect, useState } from "react";
 import * as S from "./ErinTimer.styled";
-import { daysOfWeek, dayToErinDay, ErinDayOfTheWeek } from "@enums/erin";
+import { daysOfWeek, dayToErinDay, ErinDayOfTheWeek } from "../../../types/enums/erin";
 
 export const erinDay = (): ErinDayOfTheWeek => {
   const currentDay = new Date().getDay();

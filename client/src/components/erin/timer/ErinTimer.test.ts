@@ -1,5 +1,5 @@
 import { erinDay } from "@components/erin/timer/ErinTimer";
-import { ErinDayOfTheWeek } from "@enums/erin";
+import { ErinDayOfTheWeek } from "../../../types/enums/erin";
 
 /**
  * ======================================

@@ -31,7 +31,7 @@
       "@pages/*": ["./pages/*"],
       "@lib/*": ["./lib/*"],
       "@components/*": ["./components/*"],
-      "@enums/*": ["./enums/*"],
+      "@types/*": ["./types/*"],
       "@layouts/*": ["./layouts/*"],
       "@services/*": ["./services/*"],
       "@hooks/*": ["./hooks/*"],
