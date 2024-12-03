@@ -2,6 +2,8 @@ import {FunctionComponent} from "react";
 import {IS_PROD} from "@config/processEnv";
 import Script from "next/script";
 
+// 참고 블로그 : https://1ilsang.dev/posts/google-adsense
+
 export const GoogleAdSense: FunctionComponent = () => {
   if (!IS_PROD) return null;
   /**
