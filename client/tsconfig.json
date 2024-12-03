@@ -39,7 +39,8 @@
       "@apis/*": ["./apis/*"],
       "@styles/*": ["./styles/*"],
       "@providers/*": ["./providers/*"],
-      "@images/*": ["../public/images/*"]
+      "@images/*": ["../public/images/*"],
+      "@api/*": ["./api/*"]
     }
   },
   "types": ["jest", "node"],

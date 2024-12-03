@@ -1,12 +1,10 @@
-import { ErinTimer } from "@components/erin/timer/ErinTimer";
+import {AuctionView} from "@components/erin/auction/AuctionView";
 
 export default function Home() {
+
   return (
     <div>
-      경매장
-      <div>
-        경매장
-      </div>
+      <AuctionView />
     </div>
   );
 }

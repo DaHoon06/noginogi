@@ -1,11 +1,11 @@
 import {useInfiniteQuery, useQuery} from "@tanstack/react-query";
-import {QueryKeys} from "@state/queries/key";
+import {queryKeys} from "@state/queries/key";
 import {AxiosError} from "axios";
-import {worldChatApi} from "@apis/world.chat.api";
+import {worldChatApi} from "@api/world.chat.api";
 
 export const useWorldChatQuery = (channel: string ): any => {
   return useQuery({
-    queryKey: [QueryKeys.wordChatKeys.hornBugleLists, channel],
+    queryKey: [queryKeys.wordChatKeys.hornBugleLists, channel],
     queryFn: () => worldChatApi(channel),
     placeholderData: (previousData) => previousData,
     gcTime: 1000 * 60 * 5,
@@ -15,7 +15,7 @@ export const useWorldChatQuery = (channel: string ): any => {
 
 export const useWorldChatInfinityScroll = (perPage: number, data: HornBugleWorldLists[]) => {
   return useInfiniteQuery<HornBugleWorldLists[], AxiosError>({
-    queryKey: [QueryKeys.wordChatKeys.hornBugleInfinityScrollList, data],
+    queryKey: [queryKeys.wordChatKeys.hornBugleInfinityScrollList, data],
     queryFn: async ({pageParam = 1}) => {
       try {
         const page = pageParam as unknown as number;

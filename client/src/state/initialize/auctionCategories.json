@@ -1,5 +1,5 @@
 {
-  "itemCategories": [
+  "data": [
     {
       "label": "무기",
       "value": "무기",
@@ -47,8 +47,7 @@
               "label": "핸들",
               "value": "핸들",
               "index": 8
-            }
-          ,
+            },
             {
               "label": "체인 블레이드",
               "value": "체인 블레이드",
@@ -236,74 +235,134 @@
       "index": 3,
       "children": [
         {
-          "label": "생활 도구",
-          "value": "생활 도구",
-          "index": 1
+          "category": "생활 도구",
+          "items": [
+            {
+              "label": "생활 도구",
+              "value": "생활 도구",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "도면",
-          "value": "도면",
-          "index": 2
+          "category": "도면",
+          "items": [
+            {
+              "label": "도면",
+              "value": "도면",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "옷본",
-          "value": "옷본",
-          "index": 3
+          "category": "옷본",
+          "items": [
+            {
+              "label": "옷본",
+              "value": "옷본",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "천옷/방직",
-          "value": "천옷/방직",
-          "index": 4
+          "category": "천옷/방직",
+          "items": [
+            {
+              "label": "천옷/방직",
+              "value": "천옷/방직",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "제련/블랙스미스",
-          "value": "제련/블랙스미스",
-          "index": 5
+          "category": "제련/블랙스미스",
+          "items": [
+            {
+              "label": "제련/블랙스미스",
+              "value": "제련/블랙스미스",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "매직 크래프트",
-          "value": "매직 크래프트",
-          "index": 6
+          "category": "매직 크래프트",
+          "items": [
+            {
+              "label": "매직 크래프트",
+              "value": "매직 크래프트",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "힐웬 공학",
-          "value": "힐웬 공학",
-          "index": 7
+          "category": "힐웬 공학",
+          "items": [
+            {
+              "label": "힐웬 공학",
+              "value": "힐웬 공학",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "마기그래프",
-          "value": "마기그래프",
-          "index": 8
+          "category": "마기그래프",
+          "items": [
+            {
+              "label": "마기그래프",
+              "value": "마기그래프",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "마기그래프 도안",
-          "value": "마기그래프 도안",
-          "index": 9
+          "category": "마기그래프 도안",
+          "items": [
+            {
+              "label": "마기그래프 도안",
+              "value": "마기그래프 도안",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "피니 펫",
-          "value": "피니 펫",
-          "index": 10
+          "category": "피니 펫",
+          "items": [
+            {
+              "label": "피니 펫",
+              "value": "피니 펫",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "핀즈비즈",
-          "value": "핀즈비즈",
-          "index": 11
+          "category": "핀즈비즈",
+          "items": [
+            {
+              "label": "핀즈비즈",
+              "value": "핀즈비즈",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "퍼품",
-          "value": "퍼품",
-          "index": 12
+          "category": "퍼품",
+          "items": [
+            {
+              "label": "퍼품",
+              "value": "퍼품",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "마기그래프 도안",
-          "value": "마기그래프 도안",
-          "index": 9
-        },
-        {
-          "label": "낭만농장/달빛섬",
-          "value": "낭만농장/달빛섬",
-          "index": 13
+          "category": "낭만농장/달빛섬",
+          "items": [
+            {
+              "label": "낭만농장/달빛섬",
+              "value": "낭만농장/달빛섬",
+              "index": 1
+            }
+          ]
         }
       ]
     },
@@ -313,69 +372,134 @@
       "index": 4,
       "children": [
         {
-          "label": "포션",
-          "value": "포션",
-          "index": 1
+          "category": "포션",
+          "items": [
+            {
+              "label": "포션",
+              "value": "포션",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "인챈트 스크롤",
-          "value": "인챈트 스크롤",
-          "index": 2
+          "category": "인챈트 스크롤",
+          "items": [
+            {
+              "label": "인챈트 스크롤",
+              "value": "인챈트 스크롤",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "마법가루",
-          "value": "마법가루",
-          "index": 3
+          "category": "마법가루",
+          "items": [
+            {
+              "label": "마법가루",
+              "value": "마법가루",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "개조석",
-          "value": "개조석",
-          "index": 4
+          "category": "개조석",
+          "items": [
+            {
+              "label": "개조석",
+              "value": "개조석",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "던전 통행증",
-          "value": "던전 통행증",
-          "index": 5
+          "category": "던전 통행증",
+          "items": [
+            {
+              "label": "던전 통행증",
+              "value": "던전 통행증",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "알반 훈련석",
-          "value": "알반 훈련석",
-          "index": 6
+          "category": "알반 훈련석",
+          "items": [
+            {
+              "label": "알반 훈련석",
+              "value": "알반 훈련석",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "염색 앰플",
-          "value": "염색 앰플",
-          "index": 7
+          "category": "염색 앰플",
+          "items": [
+            {
+              "label": "염색 앰플",
+              "value": "염색 앰플",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "음식",
-          "value": "음식",
-          "index": 8
+          "category": "음식",
+          "items": [
+            {
+              "label": "음식",
+              "value": "음식",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "페이지",
-          "value": "페이지",
-          "index": 8
+          "category": "페이지",
+          "items": [
+            {
+              "label": "페이지",
+              "value": "페이지",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "변신 메달",
-          "value": "변신 메달",
-          "index": 9
+          "category": "변신 메달",
+          "items": [
+            {
+              "label": "변신 메달",
+              "value": "변신 메달",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "분양 메달",
-          "value": "분양 메달",
-          "index": 10
+          "category": "분양 메달",
+          "items": [
+            {
+              "label": "분양 메달",
+              "value": "분양 메달",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "불타래",
-          "value": "불타래",
-          "index": 11
+          "category": "불타래",
+          "items": [
+            {
+              "label": "불타래",
+              "value": "불타래",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "기타 소모품",
-          "value": "기타 소모품",
-          "index": 12
+          "category": "기타 소모품",
+          "items": [
+            {
+              "label": "기타 소모품",
+              "value": "기타 소모품",
+              "index": 1
+            }
+          ]
         }
       ]
     },
@@ -385,59 +509,104 @@
       "index": 5,
       "children": [
         {
-          "label": "책",
-          "value": "책",
-          "index": 1
+          "category": "책",
+          "items": [
+            {
+              "label": "책",
+              "value": "책",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "마비노기벨",
-          "value": "마비노기벨",
-          "index": 2
+          "category": "마비노기벨",
+          "items": [
+            {
+              "label": "마비노기벨",
+              "value": "마비노기벨",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "토템",
-          "value": "토템",
-          "index": 3
+          "category": "토템",
+          "items": [
+            {
+              "label": "토템",
+              "value": "토템",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "팔리아스 유물",
-          "value": "팔리아스 유물",
-          "index": 4
+          "category": "팔리아스 유물",
+          "items": [
+            {
+              "label": "팔리아스 유물",
+              "value": "팔리아스 유물",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "허브",
-          "value": "허브",
-          "index": 5
+          "category": "허브",
+          "items": [
+            {
+              "label": "허브",
+              "value": "허브",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "퍼품",
-          "value": "퍼품",
-          "index": 6
+          "category": "퍼품",
+          "items": [
+            {
+              "label": "퍼품",
+              "value": "퍼품",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "스케치",
-          "value": "스케치",
-          "index": 7
+          "category": "스케치",
+          "items": [
+            {
+              "label": "스케치",
+              "value": "스케치",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "마족 스크롤",
-          "value": "마족 스크롤",
-          "index": 8
+          "category": "마족 스크롤",
+          "items": [
+            {
+              "label": "마족 스크롤",
+              "value": "마족 스크롤",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "기타 재료",
-          "value": "기타 재료",
-          "index": 9
+          "category": "기타 재료",
+          "items": [
+            {
+              "label": "기타 재료",
+              "value": "기타 재료",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "기타 스크롤",
-          "value": "기타 스크롤",
-          "index": 10
-        },
-        {
-          "label": "기타",
-          "value": "기타",
-          "index": 11
+          "category": "기타",
+          "items": [
+            {
+              "label": "기타",
+              "value": "기타",
+              "index": 1
+            }
+          ]
         }
       ]
     },
@@ -447,37 +616,66 @@
       "index": 6,
       "children": [
         {
-          "label": "꼬리",
-          "value": "꼬리",
-          "index": 1
+          "category": "꼬리",
+          "items": [
+            {
+              "label": "꼬리",
+              "value": "꼬리",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "날개",
-          "value": "날개",
-          "index": 2
+          "category": "날개",
+          "items": [
+            {
+              "label": "날개",
+              "value": "날개",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "제스처",
-          "value": "제스처",
-          "index": 3
+          "category": "제스처",
+          "items": [
+            {
+              "label": "제스처",
+              "value": "제스처",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "얼굴 장식",
-          "value": "얼굴 장식",
-          "index": 4
+          "category": "얼굴 장식",
+          "items": [
+            {
+              "label": "얼굴 장식",
+              "value": "얼굴 장식",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "뷰티 쿠폰",
-          "value": "뷰티 쿠폰",
-          "index": 5
+          "category": "뷰티 쿠폰",
+          "items": [
+            {
+              "label": "뷰티 쿠폰",
+              "value": "뷰티 쿠폰",
+              "index": 1
+            }
+          ]
         },
         {
-          "label": "말풍선 스티커",
-          "value": "말풍선 스티커",
-          "index": 6
+          "category": "말풍선 스티커",
+          "items": [
+            {
+              "label": "말풍선 스티커",
+              "value": "말풍선 스티커",
+              "index": 1
+            }
+          ]
         }
       ]
     }
   ]
-
 }

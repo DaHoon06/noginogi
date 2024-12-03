@@ -8,7 +8,7 @@ import { useBreakpointValue } from "@chakra-ui/react";
 
 const Main = styled.main`
   background-color: #fbfbfb;
-  color: white;
+  color: #222;
   border: none;
   font-size: 16px;
   min-height: calc(100vh - 130px);

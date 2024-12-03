@@ -30,7 +30,9 @@ export const NavBar = ({ isMobile }: { isMobile: boolean }): ReactElement => {
       <Heading as="h1">
         <NogiLogo />
       </Heading>
+
       <Spacer />
+
       <HStack spacing="20px">
         {/* 버튼 변경 */}
         {isMobile ? (
