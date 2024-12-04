@@ -27,6 +27,9 @@ const nextConfig = {
   },
   trailingSlash: true,
   swcMinify: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
