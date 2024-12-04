@@ -12,12 +12,19 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { useAuctionListQuery } from "@state/queries/hooks";
-import { AuctionItem } from "@type/interfaces/auction";
+import { AuctionCategoryType, AuctionItem } from "@type/interfaces/auction";
 import { ItemDetailModal } from "./modal/ItemDetailModal";
 
-export const AuctionList = (): ReactElement | null => {
+interface AuctionListProps {
+  itemName: string;
+  itemCategory: AuctionCategoryType;
+}
+
+export const AuctionList = (props: AuctionListProps): ReactElement | null => {
+  const { itemCategory, itemName } = props;
   const { data, isLoading } = useAuctionListQuery({
-    auction_item_category: "검",
+    auction_item_category: itemCategory,
+    item_name: itemName,
   });
   const [selectedItem, setSelectedItem] = useState<AuctionItem | null>(null);
   const { isOpen, onOpen, onClose } = useDisclosure();

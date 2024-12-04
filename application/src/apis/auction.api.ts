@@ -35,9 +35,13 @@ const auctionListApi = async (
     return response.data;
   } catch (e) {
     if (e instanceof AxiosError) {
-      const response: AxiosResponse<ResponseError> = e;
+      const response: any = e;
       console.log(response);
     }
+    return {
+      auction_item: [],
+      next_cursor: "",
+    };
   }
 };
 
@@ -70,9 +74,14 @@ const auctionHistoryApi = async (
     return response.data;
   } catch (e) {
     if (e instanceof AxiosError) {
-      const response: AxiosResponse<ResponseError> = e;
+      const response: any = e;
       console.log(response);
     }
+
+    return {
+      auction_history: [],
+      next_cursor: "",
+    };
   }
 };
 

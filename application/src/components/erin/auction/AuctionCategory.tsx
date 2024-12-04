@@ -3,31 +3,19 @@
 import { Fragment, ReactElement, useState } from "react";
 import { data } from "@state/initialize/auctionCategories.json";
 import * as S from "./AuctionCategory.styled";
+import { SelectedAuctionCategoryType } from "./AuctionView";
 
-type SelectedAuctionCategoryType = {
-  cat1: string;
-  cat2: string;
-};
+interface AuctionCategoryProps {
+  currentCategory: SelectedAuctionCategoryType;
+  onClickCategory: (label: string, step: number) => void;
+}
 
-export const AuctionCategory = (): ReactElement => {
+export const AuctionCategory = (props: AuctionCategoryProps): ReactElement => {
+  const { currentCategory, onClickCategory } = props;
   const [auctionCategory] = useState(data);
-  const [currentCategory, setCurrentCategory] =
-    useState<SelectedAuctionCategoryType>({
-      cat1: "",
-      cat2: "",
-    });
 
   const handleCategoryClick = (label: string, step: number) => {
-    setCurrentCategory((prev) => {
-      const updatedCategory = { ...prev };
-      if (step === 1) {
-        updatedCategory.cat1 = label;
-        updatedCategory.cat2 = "";
-      } else if (step === 2) {
-        updatedCategory.cat2 = label;
-      }
-      return updatedCategory;
-    });
+    onClickCategory(label, step);
   };
 
   return (
