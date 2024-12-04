@@ -7,7 +7,7 @@ export const AuctionView = async () => {
   return (
     <div className={styles.auctionViewContainer}>
       <AuctionCategory />
-      <div>
+      <div className={styles.listContainer}>
         <SearchBar />
         <AuctionList />
       </div>

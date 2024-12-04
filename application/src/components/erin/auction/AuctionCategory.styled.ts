@@ -1,13 +1,18 @@
-
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const Container = styled.div`
   padding: 20px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 2px;
   max-width: 600px;
   min-width: 200px;
+
+  @media screen and (max-width: 767px) {
+    padding: 1em 1.25em;
+    max-width: 100%;
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h2`
@@ -21,14 +26,14 @@ export const Category = styled.div<{ isSelected: boolean }>`
   cursor: pointer;
   padding: 10px 16px;
   margin: 8px 0;
-  background-color: ${({ isSelected }) => (isSelected ? '#4caf50' : '#fff')};
-  color: ${({ isSelected }) => (isSelected ? '#fff' : '#333')};
-  border: 1px solid ${({ isSelected }) => (isSelected ? '#4caf50' : '#ddd')};
+  background-color: ${({ isSelected }) => (isSelected ? "#4caf50" : "#fff")};
+  color: ${({ isSelected }) => (isSelected ? "#fff" : "#333")};
+  border: 1px solid ${({ isSelected }) => (isSelected ? "#4caf50" : "#ddd")};
   border-radius: 8px;
   transition: background-color 0.3s, color 0.3s;
   &:hover {
     background-color: ${({ isSelected }) =>
-  isSelected ? '#43a047' : '#f1f1f1'};
+      isSelected ? "#43a047" : "#f1f1f1"};
   }
 `;
 
@@ -51,11 +56,11 @@ export const Item = styled.div`
   border: 1px solid #ddd;
   border-radius: 4px;
   transition: background-color 0.3s, color 0.3s;
-  
+
   &:hover {
     background-color: #f1f1f1;
   }
-  
+
   &.selected {
     background-color: #1976d2;
     color: #fff;
