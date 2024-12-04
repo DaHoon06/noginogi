@@ -10,7 +10,6 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
-  Flex,
   Heading,
   HStack,
   IconButton,
@@ -21,12 +20,20 @@ import {
 import { ErinTimer } from "@components/erin/timer/ErinTimer";
 import { NogiLogo } from "@components/logo/Logo";
 import { ReactElement } from "react";
+import styled from "@emotion/styled";
+
+const NavBarContainer = styled.nav`
+  width: 100%;
+  display: flex;
+  align-items: center;
+`;
 
 export const NavBar = ({ isMobile }: { isMobile: boolean }): ReactElement => {
+  console.log(isMobile);
   // 화면 크기에 따라 버튼을 변경
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Flex as="nav" p="10px" alignItems="center">
+    <NavBarContainer>
       <Heading as="h1">
         <NogiLogo />
       </Heading>
@@ -63,16 +70,12 @@ export const NavBar = ({ isMobile }: { isMobile: boolean }): ReactElement => {
           </>
         ) : (
           <>
-            <Text>
-              경매장
-            </Text>
-            <Text>
-              거대한 뿔피리
-            </Text>
+            <Text>경매장</Text>
+            <Text>거대한 뿔피리</Text>
             <ErinTimer />
           </>
         )}
       </HStack>
-    </Flex>
+    </NavBarContainer>
   );
 };

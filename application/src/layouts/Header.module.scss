@@ -1,0 +1,18 @@
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: #ccc;
+
+  .headerContainer {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 1.25em;
+
+    @media screen and (max-width: 600px) {
+      padding: 0 0.8em;
+    }
+  }
+}
