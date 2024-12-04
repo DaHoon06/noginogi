@@ -31,7 +31,7 @@ export const AuctionList = (): ReactElement | null => {
 
   return (
     <>
-      <TableContainer>
+      <TableContainer maxWidth={800} border={"1px solid #ebebeb"}>
         <Table variant={"simple"}>
           <Thead>
             <Tr>
