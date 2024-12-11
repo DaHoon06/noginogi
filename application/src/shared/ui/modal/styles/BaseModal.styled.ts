@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import {motion} from "framer-motion";
+import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
 export const ModalLayout = styled(motion.dialog)`
   width: 100vw;
@@ -23,7 +23,7 @@ export const ModalBody = styled(motion.div)<{
   display: flex;
   flex-direction: column;
   justify-content: ${({ $showClose }) =>
-  $showClose ? "flex-start" : "center"};
+    $showClose ? 'flex-start' : 'center'};
   align-items: center;
   width: max-content;
   min-width: 500px;
@@ -44,7 +44,6 @@ export const ModalCloseButtonWrapper = styled.header`
   justify-content: flex-end;
   padding: 0.8em 1em;
 `;
-
 
 export const ModalContainer = styled.div`
   width: 100%;

@@ -25,7 +25,7 @@ export const daysOfWeek: DayOfTheWeek[] = [
   DayOfTheWeek.WEDNESDAY,
   DayOfTheWeek.THURSDAY,
   DayOfTheWeek.FRIDAY,
-  DayOfTheWeek.SATURDAY
+  DayOfTheWeek.SATURDAY,
 ];
 
 export const dayToErinDay: { [key in DayOfTheWeek]: ErinDayOfTheWeek } = {

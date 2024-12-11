@@ -1,19 +1,18 @@
-import { AxiosError, AxiosResponse } from "axios";
-import { nexonApiAxiosInstance } from "@shared/lib/axios";
-
+import { AxiosError, AxiosResponse } from 'axios';
+import { nexonApiAxiosInstance } from '@shared/lib/axios';
 
 /**
  * @description 경매장 매물 검색
  * @constructor
  */
 const auctionListApi = async (
-  queries: RequestAuctionList
+  queries: RequestAuctionList,
 ): Promise<ResponseAuctionList> => {
-  const { item_name = "", auction_item_category = "", cursor = "" } = queries;
-  let url = "/mabinogi/v1/auction/list?";
+  const { item_name = '', auction_item_category = '', cursor = '' } = queries;
+  let url = '/mabinogi/v1/auction/list?';
   if (item_name?.length === 0 && auction_item_category?.length === 0)
     throw new Error(
-      "검색 조건을 확인해주세요. 카테고리 또는 아이템명 중 하나는 입력되어야합니다."
+      '검색 조건을 확인해주세요. 카테고리 또는 아이템명 중 하나는 입력되어야합니다.',
     );
   else if (item_name?.length > 0 && auction_item_category?.length === 0)
     url += `item_name=${item_name}`;
@@ -35,7 +34,7 @@ const auctionListApi = async (
     }
     return {
       auction_item: [],
-      next_cursor: "",
+      next_cursor: '',
     };
   }
 };
@@ -45,14 +44,14 @@ const auctionListApi = async (
  * @constructor
  */
 const auctionHistoryApi = async (
-  queries: RequestAuctionList
+  queries: RequestAuctionList,
 ): Promise<ResponseAuctionHistory> => {
-  const { item_name = "", auction_item_category = "", cursor = "" } = queries;
-  let url = "/mabinogi/v1/auction/history?";
+  const { item_name = '', auction_item_category = '', cursor = '' } = queries;
+  let url = '/mabinogi/v1/auction/history?';
 
   if (item_name?.length === 0 && auction_item_category?.length === 0)
     throw new Error(
-      "검색 조건을 확인해주세요. 카테고리 또는 아이템명 중 하나는 입력되어야합니다."
+      '검색 조건을 확인해주세요. 카테고리 또는 아이템명 중 하나는 입력되어야합니다.',
     );
   else if (item_name?.length > 0 && auction_item_category?.length === 0)
     url += `item_name=${item_name}`;
@@ -75,7 +74,7 @@ const auctionHistoryApi = async (
 
     return {
       auction_history: [],
-      next_cursor: "",
+      next_cursor: '',
     };
   }
 };

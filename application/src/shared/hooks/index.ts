@@ -1,7 +1,4 @@
-import useModal from "./useModal";
-import useTheme from "./useTheme";
+import useModal from './useModal';
+import useTheme from './useTheme';
 
-export {
-  useModal,
-  useTheme
-}
+export { useModal, useTheme };

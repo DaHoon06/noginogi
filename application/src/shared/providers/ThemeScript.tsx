@@ -1,4 +1,4 @@
-type Theme = "light" | "dark";
+type Theme = 'light' | 'dark';
 
 declare global {
   interface Window {
@@ -22,22 +22,22 @@ function code() {
   var preferredTheme;
 
   try {
-    preferredTheme = localStorage.getItem("theme") as Theme;
+    preferredTheme = localStorage.getItem('theme') as Theme;
   } catch (err) {}
 
   window.__setPreferredTheme = function (newTheme: Theme) {
     setTheme(newTheme);
     try {
-      localStorage.setItem("theme", newTheme);
+      localStorage.setItem('theme', newTheme);
     } catch (err) {}
   };
 
-  var darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-  darkQuery.addEventListener("change", function (e) {
-    window.__setPreferredTheme(e.matches ? "dark" : "light");
+  darkQuery.addEventListener('change', function (e) {
+    window.__setPreferredTheme(e.matches ? 'dark' : 'light');
   });
-  setTheme(preferredTheme || (darkQuery.matches ? "dark" : "light"));
+  setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
 }
 
 export default function ThemeScript() {

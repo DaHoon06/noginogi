@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { ReactElement, useState } from "react";
+import { ReactElement, useState } from 'react';
 import {
   Table,
   Thead,
@@ -10,10 +10,13 @@ import {
   Td,
   TableContainer,
   useDisclosure,
-} from "@chakra-ui/react";
-import { useAuctionListQuery } from "@shared/state/queries/hooks";
-import { ItemDetailModal } from "./modal/ItemDetailModal";
-import { AuctionCategoryType, AuctionItem } from "@shared/typings/interfaces/auction";
+} from '@chakra-ui/react';
+import { useAuctionListQuery } from '@shared/state/queries/hooks';
+import { ItemDetailModal } from './modal/ItemDetailModal';
+import {
+  AuctionCategoryType,
+  AuctionItem,
+} from '@shared/typings/interfaces/auction';
 
 interface AuctionListProps {
   itemName: string;
@@ -38,8 +41,8 @@ export const AuctionList = (props: AuctionListProps): ReactElement | null => {
 
   return (
     <>
-      <TableContainer maxWidth={800} border={"1px solid #ebebeb"}>
-        <Table variant={"simple"}>
+      <TableContainer maxWidth={800} border={'1px solid #ebebeb'}>
+        <Table variant={'simple'}>
           <Thead>
             <Tr>
               <Th>이미지</Th>

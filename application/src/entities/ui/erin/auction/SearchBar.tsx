@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { Button, Flex, Input } from "@chakra-ui/react";
-import { ChangeEvent, FormEvent, ReactElement } from "react";
-import styled from "@emotion/styled";
-import { queryClient } from "@shared/lib/tanstack";
-import { queryKeys } from "@shared/state/queries/key";
+import { Button, Flex, Input } from '@chakra-ui/react';
+import { ChangeEvent, FormEvent, ReactElement } from 'react';
+import styled from '@emotion/styled';
+import { queryClient } from '@shared/lib/tanstack';
+import { queryKeys } from '@shared/state/queries/key';
 
 const Form = styled.form`
   width: 100%;
@@ -36,7 +36,7 @@ export const SearchBar = (props: SearchBarProps): ReactElement => {
       <Flex gap={2}>
         <Input
           borderRadius={2}
-          type={"text"}
+          type={'text'}
           placeholder="아이템 명을 입력해주세요."
           value={itemName}
           onChange={handleChangeInput}

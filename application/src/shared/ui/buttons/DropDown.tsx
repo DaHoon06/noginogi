@@ -4,11 +4,11 @@ import {
   Fragment,
   ReactElement,
   ReactNode,
-} from "react";
-import { motion } from "framer-motion";
-import classNames from "classnames";
-import {Typography} from "@shared/ui/Typography";
-import styled from "@emotion/styled";
+} from 'react';
+import { motion } from 'framer-motion';
+import classNames from 'classnames';
+import { Typography } from '@shared/ui/Typography';
+import styled from '@emotion/styled';
 
 interface DropDownSize {
   $width?: string | number;
@@ -89,7 +89,7 @@ export const DropDownLayout = styled.div<DropDownSize>`
   }
 `;
 
-type Variant = "black" | "default";
+type Variant = 'black' | 'default';
 
 interface DropDownProps {
   isOpen: boolean; // 아이템 박스 보여주기 여부
@@ -108,11 +108,11 @@ export const DropDown = ({
   onClickDropDown,
   label,
   icon,
-  variant = "default",
+  variant = 'default',
   width,
   height,
 }: DropDownProps): ReactElement => {
-  const buttonLabel = label ? label : "DropDown";
+  const buttonLabel = label ? label : 'DropDown';
 
   const handleItemClick = () => {
     onClickDropDown(); // 드롭다운 메뉴 닫기
@@ -123,7 +123,7 @@ export const DropDown = ({
       <DropDownButton
         $width={width}
         $height={height}
-        type={"button"}
+        type={'button'}
         onClick={onClickDropDown}
         className={classNames({
           [variant]: variant,
@@ -131,8 +131,8 @@ export const DropDown = ({
       >
         {!!icon && icon}
         <Typography
-          $fontColor={"textWhite"}
-          $fontType={"nanumSquare"}
+          $fontColor={'textWhite'}
+          $fontType={'nanumSquare'}
           $fontWeight={500}
         >
           {buttonLabel}

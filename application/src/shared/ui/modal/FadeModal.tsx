@@ -1,9 +1,8 @@
 'use client';
 
-import React, { ReactElement, ReactNode } from "react";
-import { AnimatePresence } from "framer-motion";
+import React, { ReactElement, ReactNode } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import * as Base from './styles/BaseModal.styled';
-
 
 interface FadeModalProps {
   isOpen: boolean;
@@ -24,26 +23,32 @@ export const FadeModal = (props: FadeModalProps): ReactElement => {
     <AnimatePresence>
       {isOpen && (
         <Base.ModalLayout
-          key={"fade-modal"}
+          key={'fade-modal'}
           onClick={outClick ? outClickEvent : () => {}}
           exit={{ opacity: 0 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
           <Base.ModalContainer>
-            <Base.ModalBody ref={ele} $showClose={showClose} $maxWidth={maxWidth}>
+            <Base.ModalBody
+              ref={ele}
+              $showClose={showClose}
+              $maxWidth={maxWidth}
+            >
               {!!showClose && (
                 <Base.ModalCloseButtonWrapper>
                   <button
-                    type={"button"}
-                    aria-label={"modal-close-button"}
+                    type={'button'}
+                    aria-label={'modal-close-button'}
                     onClick={onCloseModal}
                   >
                     X
                   </button>
                 </Base.ModalCloseButtonWrapper>
               )}
-              <Base.ModalContentsBox ref={ele}>{children}</Base.ModalContentsBox>
+              <Base.ModalContentsBox ref={ele}>
+                {children}
+              </Base.ModalContentsBox>
             </Base.ModalBody>
           </Base.ModalContainer>
         </Base.ModalLayout>

@@ -1,6 +1,6 @@
-import { ReactElement, useEffect, useMemo, useState } from "react";
-import { CustomSelect } from "./styles/SelectBox.styled";
-import { StylesConfig } from "react-select";
+import { ReactElement, useEffect, useMemo, useState } from 'react';
+import { CustomSelect } from './styles/SelectBox.styled';
+import { StylesConfig } from 'react-select';
 
 interface SelectOption {
   value: string | number;
@@ -20,7 +20,7 @@ export const SelectBox = (props: Props): ReactElement => {
   const {
     options,
     onChange,
-    placeholder = "",
+    placeholder = '',
     value,
     disabled = false,
     isDefaultValue = true,
@@ -38,46 +38,46 @@ export const SelectBox = (props: Props): ReactElement => {
     () => ({
       option: (provided, state: any) => ({
         ...provided,
-        border: "1px solid #ededed",
-        color: state.isSelected ? "#fff" : state.data.color,
-        backgroundColor: state.isSelected ? "#222" : "#fff",
+        border: '1px solid #ededed',
+        color: state.isSelected ? '#fff' : state.data.color,
+        backgroundColor: state.isSelected ? '#222' : '#fff',
         opacity: 0.8,
         padding: 10,
-        "&:hover": {
-          cursor: "pointer",
-          backgroundColor: "#e8e8e8",
-          color: "#858585",
+        '&:hover': {
+          cursor: 'pointer',
+          backgroundColor: '#e8e8e8',
+          color: '#858585',
         },
       }),
 
       menuPortal: (base) => ({ ...base, zIndex: 9999 }),
       control: (provided, state: any) => ({
         ...provided,
-        borderColor: state.isFocused ? "#222" : "#ededed",
-        boxShadow: state.isFocused ? "#222" : "#ededed",
-        caretColor: "transparent",
-        "& svg": {
-          fill: state.isFocused ? "#222" : "currentColor",
+        borderColor: state.isFocused ? '#222' : '#ededed',
+        boxShadow: state.isFocused ? '#222' : '#ededed',
+        caretColor: 'transparent',
+        '& svg': {
+          fill: state.isFocused ? '#222' : 'currentColor',
         },
-        "&:hover": {
-          cursor: "pointer",
+        '&:hover': {
+          cursor: 'pointer',
         },
-        minHeight: "32px",
-        height: "32px",
-        display: "flex",
-        flexWrap: "nowrap",
-        alignItems: "center",
-        padding: "0 8px",
+        minHeight: '32px',
+        height: '32px',
+        display: 'flex',
+        flexWrap: 'nowrap',
+        alignItems: 'center',
+        padding: '0 8px',
       }),
       singleValue: (provided, state: any) => ({
         ...provided,
         color: state.data.color,
-        lineHeight: "32px",
+        lineHeight: '32px',
       }),
       menuList: (provided) => ({
         ...provided,
-        "&:hover": {
-          cursor: "pointer",
+        '&:hover': {
+          cursor: 'pointer',
         },
       }),
     }),

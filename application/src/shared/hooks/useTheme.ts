@@ -1,7 +1,6 @@
-import {ThemeMode} from "@pages/_app";
-import Cookies from "js-cookie";
-import {useCallback, useEffect, useMemo, useState} from "react";
-
+import { ThemeMode } from '@pages/_app';
+import Cookies from 'js-cookie';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 type ReturnType = {
   theme: ThemeMode;
@@ -14,7 +13,9 @@ export const THEME_KEY = 'noginogi-theme';
 
 export default function useTheme(): ReturnType {
   const defaultTheme = Cookies.get(THEME_KEY) as ThemeMode;
-  const [theme, setTheme] = useState<ThemeMode>(defaultTheme || ThemeMode.LIGHT);
+  const [theme, setTheme] = useState<ThemeMode>(
+    defaultTheme || ThemeMode.LIGHT,
+  );
   const isDarkMode = useMemo(() => theme === ThemeMode.DARK, [theme]);
 
   const initTheme = useCallback(() => {
@@ -24,7 +25,8 @@ export default function useTheme(): ReturnType {
 
   useEffect(() => {
     const mode = Cookies.get(THEME_KEY);
-    if (mode && [ThemeMode.LIGHT, ThemeMode.DARK].includes(mode)) setTheme(mode);
+    if (mode && [ThemeMode.LIGHT, ThemeMode.DARK].includes(mode))
+      setTheme(mode);
   }, []);
 
   useEffect(() => {
@@ -36,15 +38,15 @@ export default function useTheme(): ReturnType {
   }, [theme]);
 
   const toggleTheme = useCallback(() => {
-    setTheme((prev) => (prev === ThemeMode.LIGHT) ? ThemeMode.DARK : ThemeMode.LIGHT);
+    setTheme((prev) =>
+      prev === ThemeMode.LIGHT ? ThemeMode.DARK : ThemeMode.LIGHT,
+    );
   }, []);
 
   return {
     theme,
     isDarkMode,
     setTheme,
-    toggleTheme
-  }
+    toggleTheme,
+  };
 }
-
-

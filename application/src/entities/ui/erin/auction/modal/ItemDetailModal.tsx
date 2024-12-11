@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   Button,
@@ -9,8 +9,8 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-} from "@chakra-ui/react";
-import { AuctionItem } from "@type/interfaces/auction";
+} from '@chakra-ui/react';
+import { AuctionItem } from '@type/interfaces/auction';
 
 interface ItemDetailModalProps {
   item: AuctionItem | null;
@@ -36,55 +36,55 @@ export const ItemDetailModal = ({
           {item &&
             item.item_option.map((opt, optIndex) => (
               <div key={`${item.item_name}_option_${optIndex}`}>
-                {opt.option_type === "아이템 보호" && (
+                {opt.option_type === '아이템 보호' && (
                   <>
                     <p>
                       {opt.option_type} <span>{opt.option_value}</span>
                     </p>
                   </>
                 )}
-                {opt.option_type === "공격" && (
+                {opt.option_type === '공격' && (
                   <>
                     <p>
-                      {opt.option_type}:{" "}
+                      {opt.option_type}:{' '}
                       <span>
                         {opt.option_value} ~ {opt.option_value2}
                       </span>
                     </p>
                   </>
                 )}
-                {opt.option_type === "부상률" && (
+                {opt.option_type === '부상률' && (
                   <>
                     <p>
-                      {opt.option_type}:{" "}
+                      {opt.option_type}:{' '}
                       <span>
                         {opt.option_value} ~ {opt.option_value2}
                       </span>
                     </p>
                   </>
                 )}
-                {opt.option_type === "크리티컬" && (
+                {opt.option_type === '크리티컬' && (
                   <>
                     <p>
                       {opt.option_type}: <span>{opt.option_value}</span>
                     </p>
                   </>
                 )}
-                {opt.option_type === "밸런스" && (
+                {opt.option_type === '밸런스' && (
                   <>
                     <p>
                       {opt.option_type}: <span>{opt.option_value}</span>
                     </p>
                   </>
                 )}
-                {opt.option_type === "숙련" && (
+                {opt.option_type === '숙련' && (
                   <>
                     <p>
                       {opt.option_type}: <span>{opt.option_value}</span>
                     </p>
                   </>
                 )}
-                {opt.option_type === "내구력" && (
+                {opt.option_type === '내구력' && (
                   <>
                     <p>
                       {opt.option_type}: <span>{opt.option_value}</span>
@@ -92,7 +92,7 @@ export const ItemDetailModal = ({
                   </>
                 )}
 
-                {opt.option_type === "아이템 색상" && (
+                {opt.option_type === '아이템 색상' && (
                   <>
                     <p>
                       {opt.option_sub_type}: <span>{opt.option_value}</span>
@@ -100,7 +100,7 @@ export const ItemDetailModal = ({
                   </>
                 )}
 
-                {opt.option_type === "일반 개조" && (
+                {opt.option_type === '일반 개조' && (
                   <>
                     <p>{opt.option_type}</p>
                     <p>
@@ -109,7 +109,7 @@ export const ItemDetailModal = ({
                   </>
                 )}
 
-                {opt.option_type === "보석 개조" && (
+                {opt.option_type === '보석 개조' && (
                   <>
                     <p>{opt.option_type}</p>
                     <p>
@@ -117,13 +117,13 @@ export const ItemDetailModal = ({
                     </p>
                   </>
                 )}
-                {opt.option_type === "장인 개조" && (
+                {opt.option_type === '장인 개조' && (
                   <>
                     <p>{opt.option_type}</p>
                     <p>{opt.option_value}</p>
                   </>
                 )}
-                {opt.option_type === "특별 개조" && (
+                {opt.option_type === '특별 개조' && (
                   <>
                     <p>{opt.option_type}</p>
                     <p>{opt.option_sub_type}</p>
@@ -131,7 +131,7 @@ export const ItemDetailModal = ({
                   </>
                 )}
 
-                {opt.option_type === "인챈트" && (
+                {opt.option_type === '인챈트' && (
                   <>
                     <p> {opt.option_type}</p>
                     <p>
@@ -141,7 +141,7 @@ export const ItemDetailModal = ({
                   </>
                 )}
 
-                {opt.option_type === "세공 랭크" && (
+                {opt.option_type === '세공 랭크' && (
                   <>
                     <p>
                       {opt.option_type}: <span>{opt.option_value}</span>
@@ -154,7 +154,7 @@ export const ItemDetailModal = ({
                   </>
                 )}
 
-                {opt.option_type === "세공 옵션" && (
+                {opt.option_type === '세공 옵션' && (
                   <>
                     <p>{opt.option_type}</p>
                     <p>{opt.option_sub_type}</p>
@@ -164,7 +164,7 @@ export const ItemDetailModal = ({
                   </>
                 )}
 
-                {opt.option_type === "에르그" && (
+                {opt.option_type === '에르그' && (
                   <>
                     <p>{opt.option_type}</p>
                     <p>{opt.option_sub_type}</p>
@@ -177,7 +177,7 @@ export const ItemDetailModal = ({
                   </>
                 )}
 
-                {opt.option_type === "피어싱 레벨" && (
+                {opt.option_type === '피어싱 레벨' && (
                   <>
                     <p>{opt.option_type}</p>
                     <p>
@@ -189,7 +189,7 @@ export const ItemDetailModal = ({
                   </>
                 )}
 
-                {opt.option_type === "남은 전용 해체 가능 횟수" && (
+                {opt.option_type === '남은 전용 해체 가능 횟수' && (
                   <>
                     <p>{opt.option_type}</p>
                     <p>
@@ -198,11 +198,11 @@ export const ItemDetailModal = ({
                   </>
                 )}
 
-                {opt.option_type === "세트효과" && (
+                {opt.option_type === '세트효과' && (
                   <>
                     <p>{opt.option_sub_type}</p>
                     <p>
-                      {opt.option_type}:{" "}
+                      {opt.option_type}:{' '}
                       <span>
                         {opt.option_value} : {opt.option_value2}
                       </span>

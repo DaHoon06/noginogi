@@ -1,6 +1,6 @@
-const sql = require("better-sqlite3");
-const db = sql("auction_category.db");
-const dummyCategory = require("./src/shared/state/initialize/auctionCategories.json");
+const sql = require('better-sqlite3');
+const db = sql('auction_category.db');
+const dummyCategory = require('./src/shared/state/initialize/auctionCategories.json');
 // const dummyCategory = [
 //   {
 //     label: "무기",
@@ -689,7 +689,7 @@ db.prepare(
   value TEXT NOT NULL,
   depth: INTEGER
   )
-  `
+  `,
 ).run();
 
 async function initData() {
@@ -707,4 +707,4 @@ async function initData() {
   }
 }
 // initData();
-console.log("경매장 카테고리 데이터 insert");
+console.log('경매장 카테고리 데이터 insert');

@@ -4,14 +4,14 @@ import {
   HTMLAttributes,
   PropsWithChildren,
   Ref,
-} from "react";
-import { FlexBoxLayout } from "./styles/FlexBox.styled";
+} from 'react';
+import { FlexBoxLayout } from './styles/FlexBox.styled';
 
 interface FlexProps {
-  $flexDirection?: CSSProperties["flexDirection"];
-  $justifyContent?: CSSProperties["justifyContent"];
-  $alignItems?: CSSProperties["alignItems"];
-  $flexWrap?: CSSProperties['flexWrap'],
+  $flexDirection?: CSSProperties['flexDirection'];
+  $justifyContent?: CSSProperties['justifyContent'];
+  $alignItems?: CSSProperties['alignItems'];
+  $flexWrap?: CSSProperties['flexWrap'];
   $gap?: string | number;
   $width?: string | number;
 }
@@ -24,12 +24,12 @@ const FlexBox = forwardRef(
   (
     {
       children,
-      $flexDirection = "column",
-      $justifyContent = "center",
-      $alignItems = "center",
-      $gap = "0",
-      $width = "100",
-      $flexWrap = "nowrap",
+      $flexDirection = 'column',
+      $justifyContent = 'center',
+      $alignItems = 'center',
+      $gap = '0',
+      $width = '100',
+      $flexWrap = 'nowrap',
       ...rest
     }: PropsWithChildren<FlexBoxProps>,
     forwardRef: Ref<HTMLDivElement>,
@@ -42,7 +42,7 @@ const FlexBox = forwardRef(
         $alignItems={$alignItems}
         $gap={$gap}
         $width={$width}
-        $flexWrap={ $flexWrap}
+        $flexWrap={$flexWrap}
         {...rest}
       >
         {children}

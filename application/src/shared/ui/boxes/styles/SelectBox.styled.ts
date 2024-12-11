@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Select from "react-select";
+import styled from 'styled-components';
+import Select from 'react-select';
 
 export const CustomSelect = styled(Select)`
   width: max-content;
@@ -7,5 +7,5 @@ export const CustomSelect = styled(Select)`
   height: 32px;
   font-size: 14px;
   color: #333333;
-  font-family: "NanumSquare", sans-serif;
+  font-family: 'NanumSquare', sans-serif;
 `;

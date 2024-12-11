@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
-import Provider from "@shared/providers/provider";
-import React from "react";
-import "@shared/styles/index.scss";
-import { GlobalStyle } from "@chakra-ui/react";
-import { BaseLayout } from "@widgets/ui/BaseLayout";
-import { ReactQueryProvider } from "@shared/lib/tanstack/providers";
+import type { Metadata } from 'next';
+import Provider from '@shared/providers/provider';
+import React from 'react';
+import '@shared/styles/index.scss';
+import { GlobalStyle } from '@chakra-ui/react';
+import { BaseLayout } from '@widgets/ui/BaseLayout';
+import { ReactQueryProvider } from '@shared/lib/tanstack/providers';
 
 export const metadata: Metadata = {
-  title: "노기노기",
-  description: "마비노기, 노기노기 라이프",
+  title: '노기노기',
+  description: '마비노기, 노기노기 라이프',
 };
 
 export default function RootLayout({

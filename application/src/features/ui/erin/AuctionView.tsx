@@ -1,16 +1,19 @@
-"use client";
+'use client';
 
-import styles from "./AuctionView.module.scss";
-import { useState } from "react";
-import { AuctionCategoryType, SelectedAuctionCategoryType } from "@shared/typings/interfaces";
-import { SearchBar, AuctionCategory, AuctionList } from "@entities/ui/erin";
+import styles from './AuctionView.module.scss';
+import { useState } from 'react';
+import {
+  AuctionCategoryType,
+  SelectedAuctionCategoryType,
+} from '@shared/typings/interfaces';
+import { SearchBar, AuctionCategory, AuctionList } from '@entities/ui/erin';
 
 export const AuctionView = () => {
-  const [itemName, setItemName] = useState("");
+  const [itemName, setItemName] = useState('');
   const [currentCategory, setCurrentCategory] =
     useState<SelectedAuctionCategoryType>({
-      cat1: "",
-      cat2: "",
+      cat1: '',
+      cat2: '',
     });
 
   const onClickCategory = (label: string, step: number) => {
@@ -18,7 +21,7 @@ export const AuctionView = () => {
       const updatedCategory = { ...prev };
       if (step === 1) {
         updatedCategory.cat1 = label;
-        updatedCategory.cat2 = "";
+        updatedCategory.cat2 = '';
       } else if (step === 2) {
         updatedCategory.cat2 = label;
       }

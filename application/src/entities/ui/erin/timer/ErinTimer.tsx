@@ -1,8 +1,12 @@
-"use client";
+'use client';
 
-import { ReactElement, useEffect, useState } from "react";
-import * as S from "./ErinTimer.styled";
-import { daysOfWeek, dayToErinDay, ErinDayOfTheWeek } from "@shared/typings/enums/erin";
+import { ReactElement, useEffect, useState } from 'react';
+import * as S from './ErinTimer.styled';
+import {
+  daysOfWeek,
+  dayToErinDay,
+  ErinDayOfTheWeek,
+} from '@shared/typings/enums/erin';
 
 export const erinDay = (): ErinDayOfTheWeek => {
   const currentDay = new Date().getDay();
@@ -19,20 +23,20 @@ const erinTime = (realTime: Date): string => {
   // 시간 변환 비율: 36분 = 24시간
   const realToVirtualFactor = (24 * 60 * 60) / (36 * 60); // 1초당 흘러가는 시간
   const totalVirtualSeconds = Math.floor(
-    totalRealSeconds * realToVirtualFactor
+    totalRealSeconds * realToVirtualFactor,
   );
 
   const virtualHours = Math.floor(totalVirtualSeconds / 3600) % 24;
   const virtualMinutes =
     Math.floor((totalVirtualSeconds % 3600) / 60 / 10) * 10;
 
-  return `${String(virtualHours).padStart(2, "0")}시 ${String(
-    virtualMinutes
-  ).padStart(2, "0")}분`;
+  return `${String(virtualHours).padStart(2, '0')}시 ${String(
+    virtualMinutes,
+  ).padStart(2, '0')}분`;
 };
 
 export const ErinTimer = (): ReactElement => {
-  const [time, setTime] = useState<string>("00시 00분");
+  const [time, setTime] = useState<string>('00시 00분');
 
   useEffect(() => {
     const updateVirtualTime = () => {

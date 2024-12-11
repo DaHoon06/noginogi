@@ -1,5 +1,5 @@
-import { keyframes } from "@emotion/react";
-import styled from "@emotion/styled";
+import { keyframes } from '@emotion/react';
+import styled from '@emotion/styled';
 
 export const blinkAnimation = keyframes`
   0%, 100% {
@@ -53,7 +53,7 @@ export const DotContainer = styled.div`
   font-size: 16px;
 
   &:after {
-    content: "";
+    content: '';
     animation: ${dotAnimation} 3s steps(3) infinite;
   }
 `;

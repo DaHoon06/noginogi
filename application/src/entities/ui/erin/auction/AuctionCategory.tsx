@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Fragment, ReactElement, useState } from "react";
-import { data } from "@shared/state/initialize/auctionCategories.json";
-import * as S from "./AuctionCategory.styled";
-import { SelectedAuctionCategoryType } from "@shared/typings/interfaces/auction";
+import { Fragment, ReactElement, useState } from 'react';
+import { data } from '@shared/state/initialize/auctionCategories.json';
+import * as S from './AuctionCategory.styled';
+import { SelectedAuctionCategoryType } from '@shared/typings/interfaces/auction';
 
 interface AuctionCategoryProps {
   currentCategory: SelectedAuctionCategoryType;

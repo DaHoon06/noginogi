@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box,
   Flex,
@@ -14,8 +14,8 @@ import {
   DrawerHeader,
   DrawerBody,
   Button,
-} from "@chakra-ui/react";
-import { ReactElement } from "react";
+} from '@chakra-ui/react';
+import { ReactElement } from 'react';
 
 interface SideBarProps {
   item: any; // 미정
@@ -30,8 +30,8 @@ export const SideBar = ({ isMobile }: SideBarProps): ReactElement => {
       style={
         isMobile
           ? {
-              backgroundColor: "#ffffffc2",
-              position: "sticky",
+              backgroundColor: '#ffffffc2',
+              position: 'sticky',
               top: 0,
             }
           : {}
@@ -41,14 +41,14 @@ export const SideBar = ({ isMobile }: SideBarProps): ReactElement => {
         <IconButton
           aria-label="Open Sidebar"
           icon={<HamburgerIcon />}
-          display={{ base: "flex", md: "none" }}
+          display={{ base: 'flex', md: 'none' }}
           onClick={onOpen}
           m="10px"
         />
       ) : (
         <>
           <Box
-            display={{ base: "none", md: "block" }}
+            display={{ base: 'none', md: 'block' }}
             position="fixed"
             left="0"
             width="200px"

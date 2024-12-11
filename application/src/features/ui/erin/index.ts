@@ -1,5 +1,3 @@
-import { AuctionView } from "@features/ui/erin/AuctionView";
+import { AuctionView } from '@features/ui/erin/AuctionView';
 
-export {
-  AuctionView
-}
+export { AuctionView };

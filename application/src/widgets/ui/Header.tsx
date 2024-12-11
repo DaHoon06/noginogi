@@ -1,6 +1,6 @@
-import { ReactElement } from "react";
-import { NavBar } from "./NavBar";
-import styles from "./Header.module.scss";
+import { ReactElement } from 'react';
+import { NavBar } from './NavBar';
+import styles from './Header.module.scss';
 
 export const Header = ({ isMobile }: { isMobile: boolean }): ReactElement => {
   return (

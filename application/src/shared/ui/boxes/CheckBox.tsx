@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactElement } from "react";
+import { PropsWithChildren, ReactElement } from 'react';
 
 interface Props extends PropsWithChildren {
   disabled?: boolean;
@@ -7,11 +7,11 @@ interface Props extends PropsWithChildren {
 }
 
 const CheckBox = ({
-                           children,
-                           disabled,
-                           checked,
-                           onChange,
-                         }: Props): ReactElement => {
+  children,
+  disabled,
+  checked,
+  onChange,
+}: Props): ReactElement => {
   return (
     <label>
       <input

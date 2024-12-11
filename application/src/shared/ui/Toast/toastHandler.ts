@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import styled from "@emotion/styled";
-import { ToastContainer, ToastOptions } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import styled from '@emotion/styled';
+import { ToastContainer, ToastOptions } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const ToastHandler = styled(ToastContainer)`
   .Toastify__toast-container {
@@ -32,7 +32,7 @@ export const ToastHandler = styled(ToastContainer)`
 `;
 
 export const defaultToastOption: ToastOptions = {
-  position: "top-right",
+  position: 'top-right',
   autoClose: 2000,
   hideProgressBar: true,
   closeOnClick: true,
@@ -42,7 +42,7 @@ export const defaultToastOption: ToastOptions = {
 };
 
 export enum ToastMessageType {
-  INFO = "info",
-  SUCCESS = "success",
-  ERROR = "error",
+  INFO = 'info',
+  SUCCESS = 'success',
+  ERROR = 'error',
 }

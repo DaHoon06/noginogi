@@ -1,3 +1,3 @@
-import { FadeModal } from "./FadeModal";
+import { FadeModal } from './FadeModal';
 
 export { FadeModal };

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Fragment, ReactElement, useCallback } from "react";
-import classNames from "classnames";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import * as S from "./styles/Pagination.styled";
+import { Fragment, ReactElement, useCallback } from 'react';
+import classNames from 'classnames';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import * as S from './styles/Pagination.styled';
 
 interface PaginationProps {
   currentPage: number; // 현재 페이지
@@ -37,7 +37,7 @@ export const Pagination = ({
     (page: number): void => {
       onClickPage(page);
     },
-    [onClickPage]
+    [onClickPage],
   );
 
   const handleClickPrevGroup = useCallback((): void => {
@@ -54,12 +54,12 @@ export const Pagination = ({
     <S.PaginationLayout>
       <S.PaginationBox>
         <li
-          className={classNames("prev", { disabled: isPrevDisabled })}
+          className={classNames('prev', { disabled: isPrevDisabled })}
           onClick={handleClickPrevGroup}
         >
           <IoIosArrowBack
             size={18}
-            color={isPrevDisabled ? "#b9b9b9" : "#222"}
+            color={isPrevDisabled ? '#b9b9b9' : '#222'}
           />
         </li>
         {[...Array(endPage - startPage + 1)].map((_, i) => (
@@ -67,8 +67,8 @@ export const Pagination = ({
             <li onClick={() => handleClickPagination(startPage + i)}>
               <span
                 className={classNames(
-                  "page",
-                  `${currentPage === startPage + i && "active"}`
+                  'page',
+                  `${currentPage === startPage + i && 'active'}`,
                 )}
               >
                 {startPage + i}
@@ -77,12 +77,12 @@ export const Pagination = ({
           </Fragment>
         ))}
         <li
-          className={classNames("next", { disabled: isNextDisabled })}
+          className={classNames('next', { disabled: isNextDisabled })}
           onClick={handleClickNextGroup}
         >
           <IoIosArrowForward
             size={18}
-            color={isNextDisabled ? "#b9b9b9" : "#222"}
+            color={isNextDisabled ? '#b9b9b9' : '#222'}
           />
         </li>
       </S.PaginationBox>

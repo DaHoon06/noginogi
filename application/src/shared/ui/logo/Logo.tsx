@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
-import Image from "next/image";
-import { ReactElement } from "react";
+import styled from '@emotion/styled';
+import Image from 'next/image';
+import { ReactElement } from 'react';
 
 const NogiLogoContainer = styled.div<{ $width: number }>`
   width: ${({ $width }) => $width}px;
@@ -20,10 +20,10 @@ export const NogiLogo = ({ isMobile }: NogiLogoProps): ReactElement => {
   return (
     <NogiLogoContainer $width={isMobile ? 70 : 90}>
       <Image
-        src={"/images/noginogi.svg"}
+        src={'/images/noginogi.svg'}
         width={width}
         height={100}
-        alt={"노기노기"}
+        alt={'노기노기'}
       />
     </NogiLogoContainer>
   );

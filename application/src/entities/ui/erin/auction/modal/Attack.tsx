@@ -1,5 +1,1 @@
-
-
-export const Attack = () => {
-
-}
+export const Attack = () => {};

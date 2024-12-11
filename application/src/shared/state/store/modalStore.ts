@@ -1,13 +1,13 @@
-import { create } from "zustand";
-import { combine, devtools } from "zustand/middleware";
+import { create } from 'zustand';
+import { combine, devtools } from 'zustand/middleware';
 
 export enum ModalType {
-  EMPTY = "",
+  EMPTY = '',
 }
 
 export enum OpenType {
-  SLIDE = "slide",
-  FADE = "fade",
+  SLIDE = 'slide',
+  FADE = 'fade',
 }
 
 type ModalInitialState = {
@@ -41,8 +41,8 @@ const useModalStore = create(
           type: ModalType.EMPTY,
           openType: OpenType.SLIDE,
         })),
-    }))
-  )
+    })),
+  ),
 );
 
 export default useModalStore;

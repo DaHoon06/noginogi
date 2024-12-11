@@ -1,7 +1,4 @@
-import hooks from './hooks'
+import hooks from './hooks';
 import keys from './key';
 
-export {
-  hooks,
-  keys
-}
+export { hooks, keys };

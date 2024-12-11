@@ -1,6 +1,6 @@
 'use client';
 
-import {useEffect} from "react";
+import { useEffect } from 'react';
 
 declare global {
   interface Window {
@@ -24,5 +24,5 @@ export const GoogleAdSenseArea = () => {
       data-ad-format="auto"
       data-full-width-responsive="true"
     />
-  )
-}
+  );
+};

@@ -1,5 +1,5 @@
-import {ReactElement, ReactNode} from "react";
-import {TableLayout} from "@shared/ui/Table/Table.styled";
+import { ReactElement, ReactNode } from 'react';
+import { TableLayout } from '@shared/ui/Table/Table.styled';
 
 interface Props {
   children: ReactNode;

@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React, { ReactElement } from "react";
-import { Header } from "./Header";
-import styled from "@emotion/styled";
-import { Footer } from "./Footer";
-import { useBreakpointValue } from "@chakra-ui/react";
+import React, { ReactElement } from 'react';
+import { Header } from './Header';
+import styled from '@emotion/styled';
+import { Footer } from './Footer';
+import { useBreakpointValue } from '@chakra-ui/react';
 
 const Main = styled.main`
   background-color: #fbfbfb;

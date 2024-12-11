@@ -1,7 +1,7 @@
-import { RequestAuctionList } from "@type/interfaces/auction";
-import { useQuery } from "@tanstack/react-query";
-import { queryKeys } from "@shared/state/queries/key";
-import { auctionListApi } from "@entities/api/erin/auction.api";
+import { RequestAuctionList } from '@type/interfaces/auction';
+import { useQuery } from '@tanstack/react-query';
+import { queryKeys } from '@shared/state/queries/key';
+import { auctionListApi } from '@entities/api/erin/auction.api';
 
 export const useAuctionListQuery = (queries: RequestAuctionList) => {
   return useQuery({
