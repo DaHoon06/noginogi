@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
-import { IS_PROD } from '@shared/config/processEnv';
 import Script from 'next/script';
+import {IS_PROD} from "@shared/config/serverEnv";
 
 // 참고 블로그 : https://1ilsang.dev/posts/google-adsense
 

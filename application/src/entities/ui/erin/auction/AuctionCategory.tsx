@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, ReactElement, useState } from 'react';
+import React, { Fragment, ReactElement, useCallback, useState } from 'react';
 import { data } from '@shared/state/initialize/auctionCategories.json';
 import * as S from './AuctionCategory.styled';
 import { SelectedAuctionCategoryType } from '@shared/typings/interfaces/auction';
@@ -10,13 +10,13 @@ interface AuctionCategoryProps {
   onClickCategory: (label: string, step: number) => void;
 }
 
-export const AuctionCategory = (props: AuctionCategoryProps): ReactElement => {
+const AuctionCategory = (props: AuctionCategoryProps): ReactElement => {
   const { currentCategory, onClickCategory } = props;
   const [auctionCategory] = useState(data);
 
-  const handleCategoryClick = (label: string, step: number) => {
+  const handleCategoryClick = useCallback((label: string, step: number) => {
     onClickCategory(label, step);
-  };
+  }, []);
 
   return (
     <S.Container>
@@ -51,3 +51,5 @@ export const AuctionCategory = (props: AuctionCategoryProps): ReactElement => {
     </S.Container>
   );
 };
+
+export default React.memo(AuctionCategory);

@@ -1,4 +1,4 @@
-export enum DayOfTheWeek {
+enum DayOfTheWeek {
   MONDAY = '월요일',
   TUESDAY = '화요일',
   WEDNESDAY = '수요일',
@@ -8,7 +8,7 @@ export enum DayOfTheWeek {
   SUNDAY = '일요일',
 }
 
-export enum ErinDayOfTheWeek {
+enum ErinDayOfTheWeek {
   MONDAY = '알반 에일레르(Alban Eiler)',
   TUESDAY = '벨테인(Beltane)',
   WEDNESDAY = '알반 헤루인(Alban Heruin)',

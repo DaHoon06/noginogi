@@ -1,10 +1,7 @@
-import {
-  IS_PROD,
-  MABINOGI_API_KEY,
-  NEXON_API_HOST,
-} from '@shared/config/processEnv';
 import axios, { AxiosInstance, InternalAxiosRequestConfig } from 'axios';
 import * as process from 'process';
+import { IS_PROD } from '@shared/config/serverEnv';
+import { MABINOGI_API_KEY, NEXON_API_HOST } from '@shared/config/clientEnv';
 
 const HOST = IS_PROD
   ? (process.env.NEXT_PUBLIC_HOST as string)

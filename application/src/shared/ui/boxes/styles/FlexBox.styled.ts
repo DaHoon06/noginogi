@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { FlexBoxProps } from '../FlexBox';
+import styled from '@emotion/styled';
 
 export const FlexBoxLayout = styled.div<FlexBoxProps>`
   display: flex;

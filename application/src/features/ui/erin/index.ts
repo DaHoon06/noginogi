@@ -1,3 +1,3 @@
-import { AuctionView } from '@features/ui/erin/AuctionView';
+import { ErinAuction } from '@features/ui/erin/ErinAuction';
 
-export { AuctionView };
+export { ErinAuction };

@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './AuctionView.module.scss';
+import styles from './ErinAuction.module.scss';
 import { useState } from 'react';
 import {
   AuctionCategoryType,
@@ -8,7 +8,7 @@ import {
 } from '@shared/typings/interfaces';
 import { SearchBar, AuctionCategory, AuctionList } from '@entities/ui/erin';
 
-export const AuctionView = () => {
+export const ErinAuction = () => {
   const [itemName, setItemName] = useState('');
   const [currentCategory, setCurrentCategory] =
     useState<SelectedAuctionCategoryType>({
