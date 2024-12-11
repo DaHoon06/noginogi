@@ -40,7 +40,11 @@
       "@styles/*": ["./styles/*"],
       "@providers/*": ["./providers/*"],
       "@images/*": ["../public/images/*"],
-      "@api/*": ["./api/*"]
+      "@api/*": ["./api/*"],
+      "@shared/*": ["./shared/*"],
+      "@features/*": ["./features/*"],
+      "@entities/*": ["./entities/*"],
+      "@widgets/*": ["./widgets/*"]
     }
   },
   "types": ["jest", "node"],

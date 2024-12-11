@@ -1,6 +1,6 @@
 const sql = require("better-sqlite3");
 const db = sql("auction_category.db");
-const dummyCategory = require("./src/state/initialize/auctionCategories.json");
+const dummyCategory = require("./src/shared/state/initialize/auctionCategories.json");
 // const dummyCategory = [
 //   {
 //     label: "무기",

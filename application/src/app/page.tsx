@@ -1,4 +1,4 @@
-import { AuctionView } from "@components/erin/auction/AuctionView";
+import { AuctionView } from "@features/ui/erin";
 
 export default function Home() {
   return (

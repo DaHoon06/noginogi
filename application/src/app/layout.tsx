@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Provider from "../providers/provider";
+import Provider from "@shared/providers/provider";
 import React from "react";
-import "@styles/index.scss";
+import "@shared/styles/index.scss";
 import { GlobalStyle } from "@chakra-ui/react";
-import { BaseLayout } from "@layouts/BaseLayout";
-import ReactQueryProvider from "@lib/tanstack/providers/reactQueryProvider";
+import { BaseLayout } from "@widgets/ui/BaseLayout";
+import { ReactQueryProvider } from "@shared/lib/tanstack/providers";
 
 export const metadata: Metadata = {
   title: "노기노기",
