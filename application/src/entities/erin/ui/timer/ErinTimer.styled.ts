@@ -25,7 +25,6 @@ export const TimeDisplay = styled.div`
 
 export const DayDisplay = styled.div`
   font-size: 14px;
-  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -6,7 +6,7 @@ import {
   AuctionCategoryType,
   SelectedAuctionCategoryType,
 } from '@shared/typings/interfaces';
-import { SearchBar, AuctionCategory, AuctionList } from '@entities/ui/erin';
+import { SearchBar, AuctionCategory, AuctionList } from '@entities/erin/ui';
 
 export const ErinAuction = () => {
   const [itemName, setItemName] = useState('');

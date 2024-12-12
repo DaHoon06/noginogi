@@ -17,7 +17,7 @@ import {
   useDisclosure,
   Button,
 } from '@chakra-ui/react';
-import { ErinTimer } from '@entities/ui/erin/timer/ErinTimer';
+import { ErinTimer } from '@entities/erin/ui/timer/ErinTimer';
 import { ReactElement } from 'react';
 import styled from '@emotion/styled';
 

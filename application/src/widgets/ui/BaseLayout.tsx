@@ -4,10 +4,9 @@ import React, { ReactElement } from 'react';
 import { Header } from './Header';
 import styled from '@emotion/styled';
 import { Footer } from './Footer';
-import { useBreakpointValue } from '@chakra-ui/react';
+import { useBreakpointValue, useColorMode } from '@chakra-ui/react';
 
 const Main = styled.main`
-  background-color: #fbfbfb;
   color: #222;
   border: none;
   font-size: 16px;
@@ -34,8 +33,12 @@ interface BaseLayoutProps {
 
 export const BaseLayout = ({ children }: BaseLayoutProps): ReactElement => {
   const isMobile = useBreakpointValue({ base: true, md: false });
+  const { colorMode } = useColorMode();
+
+  const isDarkMode = colorMode === 'dark';
+
   return (
-    <Container>
+    <Container className={isDarkMode ? 'bg-black-4' : 'bg-primary'}>
       <Header isMobile={isMobile || false} />
       <Main>
         <MainWrapper>{children}</MainWrapper>

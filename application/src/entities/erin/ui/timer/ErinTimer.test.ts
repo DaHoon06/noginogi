@@ -1,4 +1,4 @@
-import { erinDay } from '@entities/ui/erin/timer/ErinTimer';
+import { erinDay } from '@entities/erin/ui/timer/ErinTimer';
 import { ErinDayOfTheWeek } from '@shared/typings/enums/erin';
 
 /**
