@@ -1,5 +1,5 @@
-import { erinDay } from '@entities/erin/ui/timer/ErinTimer';
-import { ErinDayOfTheWeek } from '@shared/typings/enums/erin';
+import { erinDay } from '@entities/mabinogi/erin/ui/timer/ErinTimer';
+import { ErinDayOfTheWeek } from '@features/mabinogi/erin/enums';
 
 /**
  * ======================================

@@ -5,8 +5,12 @@ import { useState } from 'react';
 import {
   AuctionCategoryType,
   SelectedAuctionCategoryType,
-} from '@shared/typings/interfaces';
-import { SearchBar, AuctionCategory, AuctionList } from '@entities/erin/ui';
+} from '@features/mabinogi/erin/typings';
+import {
+  SearchBar,
+  AuctionCategory,
+  AuctionList,
+} from '@entities/mabinogi/erin/ui';
 
 export const ErinAuction = () => {
   const [itemName, setItemName] = useState('');

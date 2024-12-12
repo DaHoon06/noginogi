@@ -1,4 +1,4 @@
-import { ErinAuction } from '@features/erin/ui';
+import { ErinAuction } from '@features/mabinogi/erin/ui';
 
 export default function MabinogiPage() {
   return (

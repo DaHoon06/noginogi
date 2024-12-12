@@ -6,8 +6,18 @@ import { NoticeListDto } from '@modules/maplestory/notice/dto/notice.list.dto';
 export class NoticeController {
   constructor(private readonly noticeService: NoticeService) {}
 
-  @Get()
-  async sayHello(): Promise<NoticeListDto[]> {
+  @Get('/list')
+  async noticeList(): Promise<NoticeListDto[]> {
     return this.noticeService.getNoticeList();
+  }
+
+  @Get('/cashshop/list')
+  async cashshopNoticeList() {
+    return this.noticeService.getCashshopNoticeList();
+  }
+
+  @Get('/event/list')
+  async eventNoticeList() {
+    return this.noticeService.getEventNoticeList();
   }
 }

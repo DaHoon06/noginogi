@@ -16,7 +16,7 @@ import { ItemDetailModal } from './modal/ItemDetailModal';
 import {
   AuctionCategoryType,
   AuctionItem,
-} from '@shared/typings/interfaces/auction';
+} from '@features/mabinogi/erin/typings/auction';
 
 interface AuctionListProps {
   itemName: string;

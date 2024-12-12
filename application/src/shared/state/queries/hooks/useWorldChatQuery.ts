@@ -1,7 +1,7 @@
 import { useInfiniteQuery, useQuery } from '@tanstack/react-query';
 import { queryKeys } from '@shared/state/queries/key';
 import { AxiosError } from 'axios';
-import { worldChatApi } from '@entities/erin/api/world.chat.api';
+import { worldChatApi } from '@entities/mabinogi/erin/api/world.chat.api';
 
 export const useWorldChatQuery = (channel: string): any => {
   return useQuery({

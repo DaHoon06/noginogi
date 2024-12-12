@@ -5,7 +5,7 @@ import { MABINOGI_API_KEY, NEXON_API_HOST } from '@shared/config/clientEnv';
 
 const HOST = IS_PROD
   ? (process.env.NEXT_PUBLIC_HOST as string)
-  : ('http://localhost:3000' as string);
+  : ('http://localhost:8080' as string);
 
 const headers = {
   'Content-Type': 'application/json',

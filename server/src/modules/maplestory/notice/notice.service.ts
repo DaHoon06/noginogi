@@ -7,9 +7,6 @@ import { NoticeRepository } from '@modules/maplestory/notice/repositories/notice
 import { UpdateNoticeRepository } from '@modules/maplestory/notice/repositories/update.notice.repository';
 import { EventNoticeRepository } from '@modules/maplestory/notice/repositories/event.notice.repository';
 import { CashshopNoticeRepository } from '@modules/maplestory/notice/repositories/cashshop.notice.repository';
-import { CreateNoticeDto } from '@modules/maplestory/notice/dto/create.notice.dto';
-
-// /maplestory/v1/notice 공지 리스트 조회
 
 @Injectable()
 export class NoticeService {
@@ -23,9 +20,10 @@ export class NoticeService {
     private cashshopNoticeRepository: CashshopNoticeRepository,
   ) {
     const apiKey = configService.get<string>('MAPLESTORY_API_KEY') as string;
+    const baseURL = configService.get<string>('NEXT_API_PATH') as string;
     this.axios = createAxiosInstance(
       {
-        baseURL: `https://open.api.nexon.com`,
+        baseURL,
         headers: {
           'Content-Type': 'application/json',
         },
@@ -38,8 +36,7 @@ export class NoticeService {
     return this.noticeRepository.findNoticeList();
   }
 
-  // 공지 글 생성
-  async createNoticeList(noticeList: CreateNoticeDto[]) {
-    await this.noticeRepository.insert(noticeList);
-  }
+  async getCashshopNoticeList() {}
+
+  async getEventNoticeList() {}
 }

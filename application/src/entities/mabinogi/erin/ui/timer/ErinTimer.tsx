@@ -6,7 +6,7 @@ import {
   daysOfWeek,
   dayToErinDay,
   ErinDayOfTheWeek,
-} from '@shared/typings/enums/erin';
+} from '@features/mabinogi/erin/enums';
 
 export const erinDay = (): ErinDayOfTheWeek => {
   const currentDay = new Date().getDay();
