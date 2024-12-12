@@ -3,9 +3,10 @@ import { AppController } from './app.controller';
 import { LoggerMiddleware } from '@common/middlewares';
 import { AuthModule } from '@modules/auth/auth.module';
 import { CommonModule } from './common.module';
+import { MaplestoryModule } from '@modules/maplestory/maplestory.module';
 
 @Module({
-  imports: [CommonModule, AuthModule],
+  imports: [CommonModule, AuthModule, MaplestoryModule],
   controllers: [AppController],
   providers: [Logger],
 })

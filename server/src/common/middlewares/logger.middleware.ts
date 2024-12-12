@@ -6,7 +6,7 @@ import {
   NestMiddleware,
 } from '@nestjs/common';
 import { Request, Response, NextFunction } from 'express';
-import { createTransactionId } from '@common/lib';
+import { createTransactionId } from 'common/helper';
 
 @Injectable()
 export class LoggerMiddleware implements NestMiddleware {
