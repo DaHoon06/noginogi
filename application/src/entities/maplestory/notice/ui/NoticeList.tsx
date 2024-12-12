@@ -2,13 +2,13 @@
 
 import React, { ReactElement, useEffect, useState } from 'react';
 import { noticeListApi } from '@entities/maplestory';
-import { NoticeList } from '@entities/maplestory/notice/typings';
+import { NoticeListType } from '@entities/maplestory/notice/typings';
 import Link from 'next/link';
 import { Card } from '@chakra-ui/react';
 import classNames from 'classnames';
 import { TfiAnnouncement } from 'react-icons/tfi';
 const NoticeList = (): ReactElement => {
-  const [noticeList, setNoticeList] = useState<NoticeList[]>([]);
+  const [noticeList, setNoticeList] = useState<NoticeListType[]>([]);
 
   useEffect(() => {
     init();

@@ -1,9 +1,9 @@
 import { axiosInstance } from '@shared/lib';
 import { AxiosResponse } from 'axios';
-import { ResponseNoticeList } from '@entities/maplestory/notice/typings';
+import { ResponseNoticeListType } from '@entities/maplestory/notice/typings';
 
 export const noticeListApi = async () => {
-  const result: AxiosResponse<{ data: ResponseNoticeList[] }> =
+  const result: AxiosResponse<{ data: ResponseNoticeListType[] }> =
     await axiosInstance.get('/maplestory/notice');
   return result.data.data;
 };
