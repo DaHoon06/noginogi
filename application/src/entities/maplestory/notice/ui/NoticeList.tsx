@@ -6,24 +6,24 @@ import { NoticeListType } from '@entities/maplestory/notice/typings';
 import Link from 'next/link';
 import { Card } from '@chakra-ui/react';
 import { TfiAnnouncement } from 'react-icons/tfi';
+import { useNoticeQuery } from '../services/queries';
+
 const NoticeList = (): ReactElement => {
+  const { data, isLoading } = useNoticeQuery();
+  
   const [noticeList, setNoticeList] = useState<NoticeListType[]>([]);
 
-  useEffect(() => {
-    init();
-  }, []);
+  if (isLoading) return <div>롸</div>;
 
-  const init = async () => {
-    const result = await noticeListApi();
-    setNoticeList(result);
-  };
+  console.log(data);
+
   return (
     <Card borderRadius={4}>
       <p className={'px-10'}>
         <TfiAnnouncement size={20} /> 공지사항
       </p>
       <div className={'w-full px-10'}>
-        {noticeList.map((notice) => {
+        {data && data.map((notice) => {
           return (
             <div key={notice.url} className={'flex gap-5'}>
               <Link href={notice.url}>{notice.title}</Link>
