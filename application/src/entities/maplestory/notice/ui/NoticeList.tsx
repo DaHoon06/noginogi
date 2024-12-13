@@ -5,7 +5,6 @@ import { noticeListApi } from '@entities/maplestory';
 import { NoticeListType } from '@entities/maplestory/notice/typings';
 import Link from 'next/link';
 import { Card } from '@chakra-ui/react';
-import classNames from 'classnames';
 import { TfiAnnouncement } from 'react-icons/tfi';
 const NoticeList = (): ReactElement => {
   const [noticeList, setNoticeList] = useState<NoticeListType[]>([]);
@@ -23,7 +22,7 @@ const NoticeList = (): ReactElement => {
       <p className={'px-10'}>
         <TfiAnnouncement size={20} /> 공지사항
       </p>
-      <div className={classNames('w-full px-10')}>
+      <div className={'w-full px-10'}>
         {noticeList.map((notice) => {
           return (
             <div key={notice.url} className={'flex gap-5'}>

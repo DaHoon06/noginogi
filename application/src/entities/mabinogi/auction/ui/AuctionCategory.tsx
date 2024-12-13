@@ -3,7 +3,7 @@
 import React, { Fragment, ReactElement, useCallback, useState } from 'react';
 import { data } from '@shared/state/initialize/auctionCategories.json';
 import * as S from './AuctionCategory.styled';
-import { SelectedAuctionCategoryType } from '@features/mabinogi/erin/typings/auction';
+import { SelectedAuctionCategoryType } from '@entities/mabinogi/auction/typings';
 
 interface AuctionCategoryProps {
   currentCategory: SelectedAuctionCategoryType;
