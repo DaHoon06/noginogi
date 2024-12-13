@@ -4,7 +4,7 @@ import React, { ReactElement } from 'react';
 import { useCashshopNoticeQuery } from '../services/queries';
 import Link from 'next/link';
 
-const CashshopNotice = (): ReactElement => {
+const CashshopNoticeList = (): ReactElement => {
   const {data, isLoading} = useCashshopNoticeQuery();
 
   if (isLoading) return <div>롸</div>;
@@ -16,7 +16,8 @@ const CashshopNotice = (): ReactElement => {
           return (
             <div key={notice.url} className={'flex gap-5'}>
               <Link href={notice.url}>{notice.title}</Link>
-              <div>{notice.date.toString()}</div>
+              <div>{notice?.sale_start_date?.toString()}</div>
+              <div>{notice?.sale_end_date?.toString()}</div>
             </div>
           );
         })}
@@ -24,4 +25,4 @@ const CashshopNotice = (): ReactElement => {
   );
 };
 
-export default React.memo(CashshopNotice);
+export default React.memo(CashshopNoticeList);

@@ -13,9 +13,9 @@ type EventNoticeListType = NoticeListType & {
 };
 
 type CashshopNoticeListType = NoticeListType & {
-  date_sale_start: Date;
-  date_sale_end: Date;
-  ongoing_flag: string;
+  sale_start_date: Date | null;
+  sale_end_date: Date | null;
+  ongoing_flag: boolean | null;
 };
 
 type ResponseNoticeListType = NoticeListType;

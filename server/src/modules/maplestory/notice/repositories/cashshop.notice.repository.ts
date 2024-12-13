@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { DataSource, Repository } from 'typeorm';
 import { CashShop } from '@modules/maplestory/notice/entities/cashshop.notice.entity';
-import { EventNoticeListDto } from '../dto/event.notice.list.dto';
 import { CashshopNoticeListDto } from '../dto/cashshop.notice.list.dto';
 
 @Injectable()
@@ -22,14 +21,17 @@ export class CashshopNoticeRepository extends Repository<CashShop> {
             title,
             url,
             notice_id,
-            saleStartDate: null,
-            saleEndDate: null,
+            sale_start_date: null,
+            sale_end_date: null,
+            ongoing_flag: null,
           };
 
           if (notice?.date_sale_start)
-            returnObj.saleStartDate = notice.date_sale_start;
+            returnObj.sale_start_date = notice.date_sale_start;
           if (notice?.date_sale_end)
-            returnObj.saleEndDate = notice.date_sale_end;
+            returnObj.sale_end_date = notice.date_sale_end;
+          if (notice?.ongoing_flag)
+            returnObj.ongoing_flag = notice.ongoing_flag === 'true';
 
           return returnObj;
         }),

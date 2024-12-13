@@ -1,4 +1,4 @@
 import NoticeList from '@entities/maplestory/notice/ui/NoticeList';
-import CashshopNotice from '@entities/maplestory/notice/ui/CashshopNotice';
+import CashshopNoticeList from '@entities/maplestory/notice/ui/CashshopNoticeList';
 
-export { NoticeList, CashshopNotice };
+export { NoticeList, CashshopNoticeList };

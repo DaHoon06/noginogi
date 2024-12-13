@@ -1,4 +1,12 @@
-import { IsDate, IsNotEmpty, IsNumber, IsOptional, IsString } from "class-validator";
+import { Transform } from 'class-transformer';
+import {
+  IsBoolean,
+  IsDate,
+  IsNotEmpty,
+  IsNumber,
+  IsOptional,
+  IsString,
+} from 'class-validator';
 
 export class CashshopNoticeListDto {
   @IsString()
@@ -13,9 +21,14 @@ export class CashshopNoticeListDto {
 
   @IsDate()
   @IsOptional()
-  saleStartDate: Date;
+  sale_start_date: Date;
 
   @IsDate()
   @IsOptional()
-  saleEndDate: Date;
+  sale_end_date: Date;
+
+  @IsBoolean()
+  @Transform(({ value }) => value === 'true')
+  @IsOptional()
+  ongoing_flag: boolean;
 }
