@@ -43,7 +43,7 @@ export class CreateNoticeService {
   }
 
   // 공지 글 생성
-  async createNoticeList(noticeList: CreateNoticeDto[]): Promise<void> {
+  async createNoticeList(): Promise<void> {
     const result: AxiosResponse<{ notice: CreateNoticeDto[] }> =
       await this.axios.get(noticeListApiPath);
     await this.noticeRepository.insert(result.data.notice);
@@ -57,19 +57,15 @@ export class CreateNoticeService {
   }
 
   // 캐시샵 목록 생성
-  async createCashshopNoticeList(
-    noticeList: CreateCashshopNoticeDto[],
-  ): Promise<void> {
+  async createCashshopNoticeList(): Promise<void> {
     const result: AxiosResponse<{
-      cashshop_notice: CreateUpdateNoticeListDto[];
+      cashshop_notice: CreateCashshopNoticeDto[];
     }> = await this.axios.get(cashshopNoticeListApiPath);
     await this.cashshopNoticeRepository.insert(result.data.cashshop_notice);
   }
 
   // 업데이트 목록 생성
-  async createUpdateNoticeList(
-    noticeList: CreateUpdateNoticeListDto[],
-  ): Promise<void> {
+  async createUpdateNoticeList(): Promise<void> {
     const result: AxiosResponse<{
       update_notice: CreateUpdateNoticeListDto[];
     }> = await this.axios.get(updateNoticeListApiPath);

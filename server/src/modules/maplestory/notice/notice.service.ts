@@ -7,17 +7,19 @@ import { NoticeRepository } from '@modules/maplestory/notice/repositories/notice
 import { UpdateNoticeRepository } from '@modules/maplestory/notice/repositories/update.notice.repository';
 import { EventNoticeRepository } from '@modules/maplestory/notice/repositories/event.notice.repository';
 import { CashshopNoticeRepository } from '@modules/maplestory/notice/repositories/cashshop.notice.repository';
+import { CreateNoticeService } from './create.notice.service';
 
 @Injectable()
 export class NoticeService {
   private readonly axios: AxiosInstance;
 
   constructor(
+    private readonly createNoticeService: CreateNoticeService,
     private readonly configService: ConfigService,
-    private noticeRepository: NoticeRepository,
-    private updateNoticeRepository: UpdateNoticeRepository,
-    private eventNoticeRepository: EventNoticeRepository,
-    private cashshopNoticeRepository: CashshopNoticeRepository,
+    private readonly noticeRepository: NoticeRepository,
+    private readonly updateNoticeRepository: UpdateNoticeRepository,
+    private readonly eventNoticeRepository: EventNoticeRepository,
+    private readonly cashshopNoticeRepository: CashshopNoticeRepository,
   ) {
     const apiKey = configService.get<string>('MAPLESTORY_API_KEY') as string;
     const baseURL = configService.get<string>('NEXT_API_PATH') as string;
@@ -32,11 +34,31 @@ export class NoticeService {
     );
   }
 
+  async createNoticeList(): Promise<void> {
+    const promiseAll = [
+      this.createNoticeService.createCashshopNoticeList(),
+      this.createNoticeService.createEventNoticeList(),
+      this.createNoticeService.createNoticeList(),
+      this.createNoticeService.createUpdateNoticeList(),
+    ];
+
+    await Promise.all(promiseAll);
+    console.log('Add data Completed!');
+  }
+
   async getNoticeList(): Promise<NoticeListDto[]> {
     return this.noticeRepository.findNoticeList();
   }
 
-  async getCashshopNoticeList() {}
+  async getCashshopNoticeList() {
+    return [];
+  }
 
-  async getEventNoticeList() {}
+  async getEventNoticeList() {
+    return [];
+  }
+
+  async getUpdateNoticeList() {
+    return [];
+  }
 }
