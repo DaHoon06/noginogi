@@ -12,18 +12,15 @@ export class CashShop extends BaseEntity {
   url: string;
 
   @Column()
-  contents: string;
-
-  @Column()
   notice_id: number;
 
   @Column()
   date: Date;
 
-  @Column()
+  @Column({ nullable: true })
   date_sale_start: Date;
 
-  @Column()
+  @Column({ nullable: true })
   date_sale_end: Date;
 
   @Column()
