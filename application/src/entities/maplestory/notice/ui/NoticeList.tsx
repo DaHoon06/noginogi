@@ -1,8 +1,6 @@
 'use client';
 
-import React, { ReactElement, useEffect, useState } from 'react';
-import { noticeListApi } from '@entities/maplestory';
-import { NoticeListType } from '@entities/maplestory/notice/typings';
+import React, { ReactElement } from 'react';
 import Link from 'next/link';
 import { Card } from '@chakra-ui/react';
 import { TfiAnnouncement } from 'react-icons/tfi';
@@ -10,12 +8,8 @@ import { useNoticeQuery } from '../services/queries';
 
 const NoticeList = (): ReactElement => {
   const { data, isLoading } = useNoticeQuery();
-  
-  const [noticeList, setNoticeList] = useState<NoticeListType[]>([]);
 
   if (isLoading) return <div>롸</div>;
-
-  console.log(data);
 
   return (
     <Card borderRadius={4}>

@@ -8,6 +8,8 @@ import { UpdateNoticeRepository } from '@modules/maplestory/notice/repositories/
 import { EventNoticeRepository } from '@modules/maplestory/notice/repositories/event.notice.repository';
 import { CashshopNoticeRepository } from '@modules/maplestory/notice/repositories/cashshop.notice.repository';
 import { CreateNoticeService } from './create.notice.service';
+import { EventNoticeListDto } from './dto/event.notice.list.dto';
+import { CashshopNoticeListDto } from './dto/cashshop.notice.list.dto';
 
 @Injectable()
 export class NoticeService {
@@ -50,11 +52,11 @@ export class NoticeService {
     return this.noticeRepository.findNoticeList();
   }
 
-  async getCashshopNoticeList() {
-    return [];
+  async getCashshopNoticeList(): Promise<CashshopNoticeListDto[]> {
+    return this.cashshopNoticeRepository.findCashshopNoticeList();
   }
 
-  async getEventNoticeList() {
+  async getEventNoticeList(): Promise<EventNoticeListDto[]> {
     return [];
   }
 

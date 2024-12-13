@@ -1,6 +1,6 @@
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
+@Entity({ name: 'update_notice' })
 export class UpdateNotice extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;

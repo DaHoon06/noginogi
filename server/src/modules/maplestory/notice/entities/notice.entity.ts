@@ -6,7 +6,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity()
+@Entity({ name: 'notice' })
 export class Notice extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;

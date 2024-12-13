@@ -1,6 +1,8 @@
 import { Controller, Get, Post } from '@nestjs/common';
 import { NoticeService } from '@modules/maplestory/notice/notice.service';
 import { NoticeListDto } from '@modules/maplestory/notice/dto/notice.list.dto';
+import { EventNoticeListDto } from './dto/event.notice.list.dto';
+import { CashshopNoticeListDto } from './dto/cashshop.notice.list.dto';
 
 @Controller('maplestory/notice')
 export class NoticeController {
@@ -17,12 +19,12 @@ export class NoticeController {
   }
 
   @Get('/cashshop/list')
-  async cashshopNoticeList() {
+  async cashshopNoticeList(): Promise<CashshopNoticeListDto[]> {
     return this.noticeService.getCashshopNoticeList();
   }
 
   @Get('/event/list')
-  async eventNoticeList() {
+  async eventNoticeList(): Promise<EventNoticeListDto[]> {
     return this.noticeService.getEventNoticeList();
   }
 
