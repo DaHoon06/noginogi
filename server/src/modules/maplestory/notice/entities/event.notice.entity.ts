@@ -1,4 +1,11 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  BaseEntity,
+  Column,
+  CreateDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 
 @Entity({ name: 'event_notice' })
 export class EventNotice extends BaseEntity {
@@ -22,4 +29,10 @@ export class EventNotice extends BaseEntity {
 
   @Column()
   date_event_end: Date;
+
+  @CreateDateColumn({ default: new Date() })
+  created_at: Date;
+
+  @UpdateDateColumn()
+  updated_at: Date;
 }

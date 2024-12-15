@@ -5,7 +5,7 @@ import { UpdateNoticeRepository } from '@modules/maplestory/notice/repositories/
 import { EventNoticeRepository } from '@modules/maplestory/notice/repositories/event.notice.repository';
 import { CashshopNoticeRepository } from '@modules/maplestory/notice/repositories/cashshop.notice.repository';
 import { AxiosInstance, AxiosResponse } from 'axios';
-import { createAxiosInstance } from '@common/lib';
+import { createAxiosInstance } from '@common/lib/axios';
 import {
   CreateCashshopNoticeDto,
   CreateEventNoticeListDto,

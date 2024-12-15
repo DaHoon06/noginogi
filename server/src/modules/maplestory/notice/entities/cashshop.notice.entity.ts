@@ -1,9 +1,10 @@
 import {
   BaseEntity,
   Column,
+  CreateDateColumn,
   Entity,
   PrimaryGeneratedColumn,
-  Unique,
+  UpdateDateColumn,
 } from 'typeorm';
 
 @Entity({ name: 'cashshop_notice' })
@@ -31,4 +32,10 @@ export class CashShop extends BaseEntity {
 
   @Column()
   ongoing_flag: string;
+
+  @CreateDateColumn({ default: new Date() })
+  created_at: Date;
+
+  @UpdateDateColumn()
+  updated_at: Date;
 }

@@ -4,6 +4,7 @@ import {
   CreateDateColumn,
   Entity,
   PrimaryGeneratedColumn,
+  UpdateDateColumn,
 } from 'typeorm';
 
 @Entity({ name: 'notice' })
@@ -23,6 +24,9 @@ export class Notice extends BaseEntity {
   @Column()
   date: Date;
 
-  @CreateDateColumn()
+  @CreateDateColumn({ default: new Date() })
   created_at: Date;
+
+  @UpdateDateColumn()
+  updated_at: Date;
 }
