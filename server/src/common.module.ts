@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeormConfig } from '@config/typeorm.config';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
+import { CacheModule } from '@nestjs/cache-manager';
 
 const envFile =
   process.env.NODE_ENV === 'production'
@@ -31,6 +32,10 @@ console.log(`env : ${envFile}`);
         limit: 10,
       },
     ]),
+    CacheModule.register({
+      max: 1000,
+      isGlobal: true,
+    }),
   ],
   providers: [
     {
