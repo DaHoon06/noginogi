@@ -34,7 +34,7 @@
     "react-spinners": "^0.14.1",
     "react-switch": "^7.0.0",
     "react-toastify": "^10.0.5",
-    "swiper": "^11.1.4",
+    "swiper": "^11.1.15",
     "typescript": "^5.6.2",
     "uuid": "^9.0.1",
     "zustand": "^4.5.4"

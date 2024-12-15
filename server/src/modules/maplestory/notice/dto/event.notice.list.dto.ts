@@ -19,9 +19,9 @@ export class EventNoticeListDto {
 
   @IsDate()
   @IsOptional()
-  eventStartDate: Date;
+  event_start_date: Date;
 
   @IsDate()
   @IsOptional()
-  evebtEndDate: Date;
+  event_end_date: Date;
 }

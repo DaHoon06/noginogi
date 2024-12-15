@@ -1,4 +1,10 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  PrimaryGeneratedColumn,
+  Unique,
+} from 'typeorm';
 
 @Entity({ name: 'cashshop_notice' })
 export class CashShop extends BaseEntity {
@@ -11,7 +17,7 @@ export class CashShop extends BaseEntity {
   @Column()
   url: string;
 
-  @Column()
+  @Column({ unique: true })
   notice_id: number;
 
   @Column()

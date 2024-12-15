@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { DataSource, Repository } from 'typeorm';
 import { CashShop } from '@modules/maplestory/notice/entities/cashshop.notice.entity';
 import { CashshopNoticeListDto } from '../dto/cashshop.notice.list.dto';
+import { UpdateNoticeList } from '../dto/update.notice.list.dto';
 
 @Injectable()
 export class CashshopNoticeRepository extends Repository<CashShop> {
@@ -9,7 +10,26 @@ export class CashshopNoticeRepository extends Repository<CashShop> {
     super(CashShop, dataSource.createEntityManager());
   }
 
-  findCashshopNoticeList(): Promise<CashshopNoticeListDto[]> {
+  findCashshopNoticeList(): Promise<UpdateNoticeList[]> {
+    return this.createQueryBuilder('cashshop-notice')
+      .limit(10)
+      .orderBy('date', 'DESC')
+      .getMany()
+      .then((notices) =>
+        notices.map((notice) => {
+          const { title, date, notice_id, url } = notice;
+          return {
+            title,
+            date,
+            notice_id,
+            url,
+            type: '캐시샵'
+          };
+        }),
+      );
+  }
+
+  findCashshopNoticeListWithDate(): Promise<CashshopNoticeListDto[]> {
     return this.createQueryBuilder('cashshop_notice')
       .limit(20)
       .orderBy('date', 'DESC')

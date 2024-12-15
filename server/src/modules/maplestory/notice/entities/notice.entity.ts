@@ -17,7 +17,7 @@ export class Notice extends BaseEntity {
   @Column()
   url: string;
 
-  @Column()
+  @Column({ unique: true })
   notice_id: number;
 
   @Column()

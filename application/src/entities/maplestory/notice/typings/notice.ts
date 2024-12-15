@@ -5,7 +5,7 @@ type NoticeListType = {
   date: Date;
 };
 
-type UpdateNoticeListType = NoticeListType;
+type UpdateNoticeListType = NoticeListType & { type: string };
 
 type EventNoticeListType = NoticeListType & {
   date_event_start: Date;

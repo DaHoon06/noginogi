@@ -3,6 +3,7 @@ import { NoticeService } from '@modules/maplestory/notice/notice.service';
 import { NoticeListDto } from '@modules/maplestory/notice/dto/notice.list.dto';
 import { EventNoticeListDto } from './dto/event.notice.list.dto';
 import { CashshopNoticeListDto } from './dto/cashshop.notice.list.dto';
+import { UpdateNoticeList } from './dto/update.notice.list.dto';
 
 @Controller('maplestory/notice')
 export class NoticeController {
@@ -29,7 +30,7 @@ export class NoticeController {
   }
 
   @Get('/update/list')
-  async updateNoticeList() {
+  async updateNoticeList(): Promise<UpdateNoticeList[]> {
     return this.noticeService.getUpdateNoticeList();
   }
 }

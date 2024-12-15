@@ -1,0 +1,52 @@
+.carouselContainer {
+  width: 100%;
+  height: 280;
+  background-color: rgba(227,227,227,0.7);
+
+  .carouselBody {
+    width: 100%;
+    height: 100%;
+
+    .carouselBanner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .carouselBannerImage {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+  
+    .carouselCountWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .carouselCount{
+      position: relative;
+      bottom: 38;
+      right: 4;
+      z-index: 1;
+      background-color: rgba(79,79,79,0.61);
+      width: 46;
+      height: 30;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 24px;
+      color: #fff;
+      font-size: 14;
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: -0.3px;
+    }
+  }
+}
