@@ -4,12 +4,17 @@ import { ValidationPipe } from '@nestjs/common';
 import * as cookieParser from 'cookie-parser';
 import * as compression from 'compression';
 import { ResponseInterceptor } from '@common/interceptors/response.interceptor';
+import { NestExpressApplication } from '@nestjs/platform-express';
 
 const origin = ['http://localhost:3000'];
 const PORT = process.env.PORT ?? 8080;
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create<NestExpressApplication>(AppModule);
+
+  app.useStaticAssets('public', {
+    prefix: '/public/',
+  });
 
   app.setGlobalPrefix('/api');
   app.useGlobalPipes(

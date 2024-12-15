@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Inject, Injectable, Logger } from '@nestjs/common';
 import { Cache } from 'cache-manager';
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import { AxiosInstance } from 'axios';
@@ -10,6 +10,7 @@ import { OverallRankingQueryStringDto } from './dto/ranking.query.dto';
 
 @Injectable()
 export class RankingService {
+  private readonly logger = new Logger(RankingService.name);
   private readonly axios: AxiosInstance;
 
   constructor(

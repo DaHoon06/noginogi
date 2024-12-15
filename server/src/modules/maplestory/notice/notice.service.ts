@@ -1,7 +1,4 @@
-import { Injectable } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
-import { AxiosInstance, AxiosResponse } from 'axios';
-import { createAxiosInstance } from '@common/lib';
+import { Injectable, Logger } from '@nestjs/common';
 import { NoticeListDto } from '@modules/maplestory/notice/dto/notice.list.dto';
 import { NoticeRepository } from '@modules/maplestory/notice/repositories/notice.repository';
 import { UpdateNoticeRepository } from '@modules/maplestory/notice/repositories/update.notice.repository';
@@ -14,6 +11,8 @@ import { UpdateNoticeList } from './dto/update.notice.list.dto';
 
 @Injectable()
 export class NoticeService {
+  private readonly logger = new Logger(NoticeService.name);
+
   constructor(
     private readonly createNoticeService: CreateNoticeService,
     private readonly noticeRepository: NoticeRepository,
