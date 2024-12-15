@@ -1,15 +1,9 @@
-import Link from 'next/link';
-import { ThemeToggleButton } from '@entities/theme/ThemeToggleButton';
 import { NoticeView } from '@features/maplestory';
+import { ReactElement } from 'react';
 
-export default function Home() {
+export default function Home(): ReactElement {
   return (
     <div>
-      <ThemeToggleButton />
-      <div>MapleStory</div>
-      <div className={'mt-10 bg-primary-2'}>
-        <Link href={'/mabinogi/auction'}>Mabinogi</Link>
-      </div>
       <NoticeView />
     </div>
   );

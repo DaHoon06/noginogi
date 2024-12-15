@@ -19,6 +19,7 @@ import {
 } from '@chakra-ui/react';
 import { ReactElement } from 'react';
 import styled from '@emotion/styled';
+import { ThemeToggleButton } from '@entities/theme/ThemeToggleButton';
 
 const NavBarContainer = styled.nav`
   width: 100%;
@@ -65,8 +66,7 @@ export const NavBar = ({ isMobile }: { isMobile: boolean }): ReactElement => {
           </>
         ) : (
           <>
-            <Text>경매장</Text>
-            <Text>거대한 뿔피리</Text>
+            <ThemeToggleButton />
           </>
         )}
       </HStack>

@@ -22,7 +22,7 @@ export class UpdateNoticeRepository extends Repository<UpdateNotice> {
             date,
             notice_id,
             url,
-            type: '업데이트'
+            type: '공지'
           };
         }),
       );

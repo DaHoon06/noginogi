@@ -20,11 +20,7 @@ const Label = styled.div<{ type: string }>`
   font-weight: bold;
   text-transform: uppercase;
   background-color: ${({ type }) =>
-    type === '캐시샵'
-      ? '#3b82f6'
-      : type === '업데이트'
-        ? '#10b981'
-        : '#6b7280'};
+    type === '캐시샵' ? '#10b981' : type === '공지' ? '#5d7acb' : '#6b7280'};
   color: #fff;
   padding: 0 1em;
   border-radius: 20px;
@@ -69,9 +65,12 @@ const SwiperWrapper = styled.div`
     position: relative;
     margin-top: 1rem;
   }
+
   .swiper-pagination-bullet-active {
-    color: black;
-    background-color: black;
+    color: #94aef4;
+    background-color: #94aef4;
+    width: 26px;
+    border-radius: 10px;
   }
 `;
 

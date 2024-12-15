@@ -4,8 +4,6 @@
   "description": "",
   "scripts": {
     "release": "standard-version",
-    "client:run": "cd application && npm run dev",
-    "api-server:run": "cd server && npm run start:dev",
     "dev:server:run": "concurrently \"cd application && npm run dev\" \"cd server && npm run start:dev\""
   },
   "repository": {
