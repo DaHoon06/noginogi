@@ -10,7 +10,13 @@ export class ChannelRepository extends Repository<Channel> {
 
   findChannelList() {
     return this.createQueryBuilder('channel')
-      .orderBy('channel_index', 'DESC')
+      .select([
+        'channel.channel_name',
+        'channel.icon',
+        'channel.channel_value',
+        'channel.channel_type',
+      ])
+      .orderBy('channel.channel_index', 'ASC')
       .getMany();
   }
 }

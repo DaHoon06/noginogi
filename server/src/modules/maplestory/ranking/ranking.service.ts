@@ -36,7 +36,7 @@ export class RankingService {
     if (!cacheData) {
       const url = `${overallRankingListPath}?date=2024-12-13`;
       const result = await this.axios.get(url);
-      console.log(result);
+      console.log(result.data);
       console.log('캐시 데이터가 존재하지 않습니다.');
     }
   }

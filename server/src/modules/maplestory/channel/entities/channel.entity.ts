@@ -13,10 +13,10 @@ export class Channel extends BaseEntity {
   id: string;
 
   @Column({ type: 'varchar', length: 255 })
-  channel_namel: string;
+  channel_name: string;
 
   @Column({ type: 'varchar', length: 255, unique: true })
-  chanel_value: string;
+  channel_value: string;
 
   @Column({ type: 'varchar', length: 255 })
   icon: string;
